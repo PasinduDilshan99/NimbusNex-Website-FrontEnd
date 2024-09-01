@@ -28,7 +28,7 @@ const TopSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % changes.length);
-    }, 7000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [changes.length]);
@@ -36,18 +36,24 @@ const TopSlider = () => {
   const currentChange = changes[currentIndex];
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => prevIndex - 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? changes.length - 1 : prevIndex - 1
+    );
   };
-
+  
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === changes.length - 1 ? 0 : prevIndex + 1
+    );
   };
+  
 
   return (
     <div
-      className="w-full bg-cover bg-center py-32"
+      className="w-full bg-cover bg-center py-32 "
       style={{ backgroundImage: `url(${currentChange.image})` }}
     >
+      
       <div className="flex justify-between items-center">
         <div className="m-10 bg-white p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
           <button onClick={handlePrevious}>
@@ -56,7 +62,7 @@ const TopSlider = () => {
         </div>
         <div className="flex flex-col py-6">
           <div className="flex justify-center">
-            <div className="bg-white p-3 rounded-full">
+            <div className="bg-white p-3 rounded-full hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out">
               <Image
                 src="/company-logo.png"
                 width={30}
@@ -65,7 +71,7 @@ const TopSlider = () => {
               />
             </div>
           </div>
-          <div className="text-9xl flex justify-center content-center text-center font-bold text-white hover:text-amber-100 transition-colors duration-1000 ease-in-out">
+          <div className="text-9xl flex justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out">
             {currentChange.text}
           </div>
           <div className="flex justify-center text-2xl py-4">
