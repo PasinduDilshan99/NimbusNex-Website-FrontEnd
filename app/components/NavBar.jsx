@@ -24,7 +24,7 @@ const NavBar = () => {
   ];
   return (
     <div className="">
-      <div className="flex justify-between mx-32 bg-gray-200 box-model">
+      <div className="flex justify-between mx-32 bg-gray-200 ">
         <div className="flex bg-[#ffb237] px-4">
           <div className="justify-center content-center">
             <Image src="/company-logo.png" width={40} height={40} alt="logo" />

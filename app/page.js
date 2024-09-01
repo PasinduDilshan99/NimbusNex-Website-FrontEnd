@@ -1,7 +1,10 @@
 import Image from "next/image";
+import TopSlider from "./components/TopSlider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <main className=" min-h-screen  items-center justify-between">
+      <TopSlider/>
+    </main>
   );
 }
