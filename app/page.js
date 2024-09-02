@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import CompanyOverview from "./components/CompanyOverview";
 import Services from "./components/servicesComponents/Services";
 import OurServices from "./components/ourServices/OurServices";
+import ITSupport from "./components/itSupport/ITSupport";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
       </div>
       <div>
         <OurServices/>
+      </div>
+      <div>
+        <ITSupport/>
       </div>
     </main>
   );
