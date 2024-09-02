@@ -3,6 +3,8 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import AccessibleForwardIcon from "@mui/icons-material/AccessibleForward";
 import CompanyOverviewService from "./CompanyOverviewService";
 import AnimationIcon from "@mui/icons-material/Animation";
+import CheckIcon from "@mui/icons-material/Check";
+import Image from "next/image";
 
 const CompanyOverviewContent = () => {
   const services = [
@@ -20,7 +22,7 @@ const CompanyOverviewContent = () => {
     },
   ];
   return (
-    <div className="min-h-full flex  flex-col justify-start p-8">
+    <div className="min-h-full flex  flex-col justify-start px-8">
       <div className="flex ">
         <div className="mr-4">
           <AnimationIcon />
@@ -69,11 +71,28 @@ const CompanyOverviewContent = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div></div>
-        <div></div>
+      <div className="flex flex-col">
+        <div className="flex items-center p-2">
+          <div className="bg-[#ffb237] rounded-full p-1 mx-2">
+            <CheckIcon />
+          </div>
+          <div>
+            Nor again is there anyone who loves or pursues or desires to obtain
+          </div>
+        </div>
+        <div className="flex items-center p-2">
+          <div className="bg-[#ffb237] rounded-full p-1 mx-2">
+            <CheckIcon />
+          </div>
+          <div>Nam libero tempore, cum soluta nobis est eligendi optio</div>
+        </div>
       </div>
-      <div></div>
+      <div className="bg-[#ffb237] p-4 flex mt-2">
+        <div>
+          <Image src="/company-logo.png" width={30} height={30} alt="logo" className="mx-3" />
+        </div>
+        <div className="text-xl">FOR YOUR IT BUSINESS, WE MADE THINGS EASIER</div>
+      </div>
     </div>
   );
 };
