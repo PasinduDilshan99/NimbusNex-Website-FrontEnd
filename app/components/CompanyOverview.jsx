@@ -4,7 +4,7 @@ import CompanyOverviewImages from "./companyOverviewComponents/CompanyOverviewIm
 
 const CompanyOverview = () => {
   return (
-    <div className="flex flex-col lg:flex-row mt-16 my-5 py-10">
+    <div className="flex flex-col lg:flex-row md:justify-center md:items-center mt-16 my-5 py-10">
       <div>
         <CompanyOverviewImages />
       </div>
