@@ -40,22 +40,20 @@ const TopSlider = () => {
       prevIndex === 0 ? changes.length - 1 : prevIndex - 1
     );
   };
-  
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === changes.length - 1 ? 0 : prevIndex + 1
     );
   };
-  
 
   return (
     <div
-      className="w-full bg-cover bg-center py-32 "
+      className="w-full bg-cover bg-center py-24 "
       style={{ backgroundImage: `url(${currentChange.image})` }}
     >
-      
       <div className="flex justify-between items-center">
-        <div className="m-10 bg-white p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
+        <div className="m-10 bg-yellow-300 p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
           <button onClick={handlePrevious}>
             <ArrowBackIosIcon />
           </button>
@@ -71,19 +69,19 @@ const TopSlider = () => {
               />
             </div>
           </div>
-          <div className="text-9xl flex justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out">
+          <div className="text-7xl flex my-8 justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out">
             {currentChange.text}
           </div>
           <div className="flex justify-center text-2xl py-4">
             <div className="py-4 px-7 bg-[#ffb237] mx-4 rounded-xl hover:bg-white hover:text-black transition-colors duration-1000 ease-in-out">
               View Our Services
             </div>
-            <div className="py-4 px-7 bg-white mx-4 rounded-xl hover:bg-[#ffb237] hover:text-black transition-colors duration-1000 ease-in-out">
+            <div className="py-4 px-7 bg-white text-black mx-4 rounded-xl hover:bg-[#ffb237] hover:text-white transition-colors duration-1000 ease-in-out">
               Learn More
             </div>
           </div>
         </div>
-        <div className="m-10 bg-white p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
+        <div className="m-10 bg-yellow-300 p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
           <button onClick={handleNext}>
             <ArrowForwardIosIcon />
           </button>

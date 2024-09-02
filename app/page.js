@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen items-center justify-between relative">
+    <main className="min-h-screen relative">
       <div className="z-20 relative">
         <NavBar />
       </div>

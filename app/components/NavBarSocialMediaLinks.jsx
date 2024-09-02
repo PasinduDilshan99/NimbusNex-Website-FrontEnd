@@ -29,10 +29,10 @@ const NavBarSocialMediaLinks = () => {
   ];
 
   return (
-    <div className="flex m-10">
+    <div className="flex m-5">
       {socialMediaLinks.map((socialMediaLink) => (
         <a
-          className="flex flex-col justify-center p-2 m-1 bg-slate-300 hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out"
+          className="flex flex-col justify-center p-2 m-1 my-2 bg-slate-300 hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out"
           key={socialMediaLink.id}
           href={socialMediaLink.link}
           target="_blank"

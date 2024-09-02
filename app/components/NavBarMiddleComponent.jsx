@@ -2,7 +2,7 @@ import React from "react";
 
 const NavBarMiddleComponent = ({ props }) => {
   return (
-    <div className="flex p-4  ">
+    <div className="flex m-2  justify-center items-center">
       <div className="p-4 justify-center content-center bg-gray-300 rounded-full hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out ">
         <props.icon />
       </div>
