@@ -2,6 +2,7 @@ import React from "react";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import AccessibleForwardIcon from "@mui/icons-material/AccessibleForward";
 import CompanyOverviewService from "./CompanyOverviewService";
+import AnimationIcon from "@mui/icons-material/Animation";
 
 const CompanyOverviewContent = () => {
   const services = [
@@ -19,16 +20,23 @@ const CompanyOverviewContent = () => {
     },
   ];
   return (
-    <div>
-      <div>introduce Company</div>
-      <div>Our Company specializesin IT Solutions</div>
-      <div>
+    <div className="min-h-full flex  flex-col justify-start p-8">
+      <div className="flex ">
+        <div className="mr-4">
+          <AnimationIcon />
+        </div>
+        <div className="uppercase">introduce Company</div>
+      </div>
+      <div className="capitalize text-4xl font-bold mt-3 ">
+        Our Company <br /> specializesin IT Solutions
+      </div>
+      <div className="text-lg mt-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, Heres what to
         know about how to start a consulting business
       </div>
-      <div>
+      <div className=" p-4 flex mt-3">
         <div className="flex items-center">
-          <div className="flex flex-col">
+          <div className="flex flex-col  mr-4">
             <div>
               <CompanyOverviewService
                 props={{
@@ -52,8 +60,10 @@ const CompanyOverviewContent = () => {
             </div>
           </div>
           <div>
-            <div className="bg-yellow-600 p-8">
-              <div className="h-10 w-10 rounded-full bg-red"></div>
+            <div className="bg-[#ffb237] p-8 flex justify-center flex-col items-center">
+              <div className="h-16 w-16 rounded-full border-r-white border-8 flex items-center justify-center">
+                <div className="">90%</div>
+              </div>
               <div>IT Project Solution</div>
             </div>
           </div>

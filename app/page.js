@@ -4,7 +4,7 @@ import CompanyOverview from "./components/CompanyOverview";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative bg-white text-black">
       <div className="z-20 relative">
         <NavBar />
       </div>

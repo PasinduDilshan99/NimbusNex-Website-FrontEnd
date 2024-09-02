@@ -2,8 +2,8 @@ import React from "react";
 
 const CompanyOverviewService = ({ props }) => {
   return (
-    <div className="flex items-center">
-      <div>
+    <div className="flex items-center p-2">
+      <div className="p-4 m-2 rounded-full bg-[#ffb237]">
         <props.icon />
       </div>
       <div className="flex flex-col ">

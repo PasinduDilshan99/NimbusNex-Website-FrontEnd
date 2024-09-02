@@ -1,18 +1,18 @@
-import React from 'react'
-import CompanyOverviewContent from './companyOverviewComponents/CompanyOverviewContent'
-import CompanyOverviewImages from './companyOverviewComponents/CompanyOverviewImages'
+import React from "react";
+import CompanyOverviewContent from "./companyOverviewComponents/CompanyOverviewContent";
+import CompanyOverviewImages from "./companyOverviewComponents/CompanyOverviewImages";
 
 const CompanyOverview = () => {
   return (
-    <div className='flex mt-16'>
+    <div className="flex flex-col lg:flex-row mt-16 my-5 py-10">
       <div>
-        <CompanyOverviewImages/>
+        <CompanyOverviewImages />
       </div>
       <div>
-        <CompanyOverviewContent/>
+        <CompanyOverviewContent />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CompanyOverview
+export default CompanyOverview;
