@@ -39,8 +39,24 @@ body {
   }
 }
 
-.rotate-animation {
-  animation: rotate 10s linear infinite;
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+} 
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(20%);
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 

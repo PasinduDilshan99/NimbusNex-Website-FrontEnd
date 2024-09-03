@@ -4,6 +4,7 @@ import CompanyOverview from "./components/CompanyOverview";
 import Services from "./components/servicesComponents/Services";
 import OurServices from "./components/ourServices/OurServices";
 import ITSupport from "./components/itSupport/ITSupport";
+import FeedBack from "./components/feedback/FeedBack";
 
 export default function Home() {
   return (
@@ -21,10 +22,13 @@ export default function Home() {
         <Services />
       </div>
       <div>
-        <OurServices/>
+        <OurServices />
       </div>
       <div>
-        <ITSupport/>
+        <ITSupport />
+      </div>
+      <div>
+        <FeedBack/>
       </div>
     </main>
   );
