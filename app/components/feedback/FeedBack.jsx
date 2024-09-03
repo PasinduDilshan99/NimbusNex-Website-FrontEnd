@@ -1,7 +1,8 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import FeedBackComponent from "./FeedBackComponent";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const FeedBack = () => {
   const feedBacksData = [
@@ -25,6 +26,16 @@ const FeedBack = () => {
       image: "/testimonial-v1-img2.jpg",
       company: "AAA",
     },
+    {
+      id: 3,
+      rate: 2,
+      comment: "Good Company",
+      text: "Delta compression using up to 8 threads Delta compression using up to 8 threads Delta compression using up to 8 threads",
+      name: "ABCDEF",
+      position: "CEIO",
+      image: "",
+      company: "AAA",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,15 +43,15 @@ const FeedBack = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % feedBacksData.length);
-    }, 2000); // Change every 5 seconds
+    }, 12000); 
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval); 
   }, [feedBacksData.length]);
 
   return (
     <div className="flex flex-col items-center mt-20 p-10 bg-yellow-100">
       <div className="flex">
-        <div className="">
+        <div>
           <BorderColorIcon />
         </div>
         <div className="px-4 text-lg">Our Testimonial</div>
@@ -50,10 +61,16 @@ const FeedBack = () => {
         <br />
         Theyre Talking?
       </div>
-      <div className="">
-        <div className="m-3 box-model bg-white">
-          <FeedBackComponent props={feedBacksData[currentIndex]} />
-        </div>
+      <div className="m-3  bg-white w-[400px] md:w-[720px] lg:[100%]">
+        <TransitionGroup>
+          <CSSTransition
+            key={feedBacksData[currentIndex].id}
+            timeout={500}
+            classNames="fade"
+          >
+            <FeedBackComponent props={feedBacksData[currentIndex]} />
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     </div>
   );
