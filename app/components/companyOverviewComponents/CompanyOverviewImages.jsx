@@ -12,12 +12,12 @@ const CompanyOverviewImages = () => {
       <div className="absolute bottom-0 right-0 z-10 border border-white border-t-8 border-l-8">
         <Image
           src="/about-v3-img2.jpg"
-          alt="Responsive Image"
-          layout="responsive"
-          width={360}
-          height={365}
+          width={500}
+          height={500}
+          alt="Image description"
           className="w-full h-auto"
         />
+
         <div className="absolute -top-7 -left-7 z-20 m-2">
           <Image src="/company-logo.png" width={40} height={40} alt="logo" />
         </div>
