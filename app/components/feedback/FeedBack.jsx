@@ -43,7 +43,7 @@ const FeedBack = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % feedBacksData.length);
-    }, 12000); 
+    }, 3000); 
 
     return () => clearInterval(interval); 
   }, [feedBacksData.length]);
