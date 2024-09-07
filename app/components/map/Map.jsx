@@ -24,7 +24,7 @@ const Map = () => {
         style={{ height: "100%", width: "100%" }}
         ref={mapRef}
         whenCreated={setMap}
-        scrollWheelZoom={false} // Disable zoom on mouse wheel
+        scrollWheelZoom={false} 
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={markerPosition}>
