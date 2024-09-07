@@ -7,6 +7,7 @@ import ITSupport from "./components/itSupport/ITSupport";
 import FeedBack from "./components/feedback/FeedBack";
 import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
 import OurWorkProcess from "./components/ourWorkProcess/OurWorkProcess";
+import ITServiceCustomize from "./components/itServiceCustomize/ITServiceCustomize";
 
 export default function Home() {
   return (
@@ -32,11 +33,18 @@ export default function Home() {
       {/* <div>
         <FeedBack/>
       </div> */}
-      <div>
-        <RecentProjectArea/>
+      <div className="relative">
+        <div>
+          <RecentProjectArea />
+        </div>
+        <div className="absolute w-full z-10 -bottom-10">
+          <div className="flex justify-center w-full ">
+            <ITServiceCustomize />
+          </div>
+        </div>
       </div>
       <div>
-        <OurWorkProcess/>
+        <OurWorkProcess />
       </div>
     </main>
   );

@@ -29,7 +29,7 @@ const RecentProjectArea = () => {
 
   return (
     <div>
-      <div className="bg-[#45260e] flex flex-col items-center p-20">
+      <div className="bg-[#45260e] flex flex-col items-center p-20 pb-32">
         <div className="p-4 uppercase flex justify-center items-center ">
           <div className="px-4">
             <PentagonIcon className="text-[#ffb237]" />
