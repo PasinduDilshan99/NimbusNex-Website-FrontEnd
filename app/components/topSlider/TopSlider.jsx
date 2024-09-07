@@ -73,10 +73,10 @@ const TopSlider = () => {
             {currentChange.text}
           </div>
           <div className="flex justify-center text-2xl py-4">
-            <div className="py-4 px-7 bg-[#ffb237] mx-4 rounded-xl hover:bg-white hover:text-black transition-colors duration-1000 ease-in-out">
+            <div className="py-4 px-7 bg-[#ffb237] mx-4 rounded-xl hover:bg-white hover:text-black transition-colors duration-1000 ease-in-out  hover:scale-105">
               View Our Services
             </div>
-            <div className="py-4 px-7 bg-white text-black mx-4 rounded-xl hover:bg-[#ffb237] hover:text-white transition-colors duration-1000 ease-in-out">
+            <div className="py-4 px-7 bg-white text-black mx-4 rounded-xl hover:bg-[#ffb237] hover:text-white transition-colors duration-1000 ease-in-out hover:scale-105">
               Learn More
             </div>
           </div>

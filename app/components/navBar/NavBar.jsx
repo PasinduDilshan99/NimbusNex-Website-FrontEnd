@@ -1,5 +1,4 @@
 import React from "react";
-import { logo } from "../../public/company-logo.png";
 import NavBarSocialMediaLinks from "./NavBarSocialMediaLinks";
 import EmailIcon from "@mui/icons-material/Email";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";

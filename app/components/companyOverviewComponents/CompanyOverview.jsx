@@ -1,6 +1,7 @@
 import React from "react";
-import CompanyOverviewContent from "./companyOverviewComponents/CompanyOverviewContent";
-import CompanyOverviewImages from "./companyOverviewComponents/CompanyOverviewImages";
+import CompanyOverviewImages from "./CompanyOverviewImages";
+import CompanyOverviewContent from "./CompanyOverviewContent";
+
 
 const CompanyOverview = () => {
   return (

@@ -1,6 +1,6 @@
-import TopSlider from "./components/TopSlider";
-import NavBar from "./components/NavBar";
-import CompanyOverview from "./components/CompanyOverview";
+import TopSlider from "./components/topSlider/TopSlider";
+import NavBar from "./components/navBar/NavBar";
+import CompanyOverview from "./components/companyOverviewComponents/CompanyOverview";
 import Services from "./components/servicesComponents/Services";
 import OurServices from "./components/ourServices/OurServices";
 import ITSupport from "./components/itSupport/ITSupport";
@@ -16,7 +16,7 @@ import LocationDetails from "./components/locationDetails/LocationDetails";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative bg-white text-black">
+    <main className="min-h-screen relative bg-[#fffbe3] text-black">
       <div className="z-20 relative">
         <NavBar />
       </div>
@@ -35,9 +35,9 @@ export default function Home() {
       <div>
         <ITSupport />
       </div>
-      {/* <div>
+      <div>
         <FeedBack/>
-      </div> */}
+      </div>
       <div className="relative">
         <div>
           <RecentProjectArea />
@@ -55,10 +55,10 @@ export default function Home() {
         <NewPosts />
       </div>
       <div className="relative">
-        <div className="z-0">
-          {/* <Map /> */}
-        </div>
-        <div className="absolute w-full z-20 -bottom-10">
+        {/* <div className="">
+          <Map />
+        </div> */}
+        <div className="absolute w-full z-50 -bottom-10">
           <div className="flex justify-center w-full ">
             <LocationDetails />
           </div>
