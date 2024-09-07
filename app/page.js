@@ -9,6 +9,9 @@ import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
 import OurWorkProcess from "./components/ourWorkProcess/OurWorkProcess";
 import ITServiceCustomize from "./components/itServiceCustomize/ITServiceCustomize";
 import NewPosts from "./components/newPosts/NewPosts";
+import 'leaflet/dist/leaflet.css';
+import Map from "./components/map/Map";
+
 
 export default function Home() {
   return (
@@ -49,6 +52,9 @@ export default function Home() {
       </div>
       <div>
         <NewPosts />
+      </div>
+      <div>
+        <Map/>
       </div>
     </main>
   );
