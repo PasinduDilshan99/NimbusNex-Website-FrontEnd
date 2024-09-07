@@ -5,6 +5,7 @@ import CompanyOverview from '../components/companyOverviewComponents/CompanyOver
 import Services from '../components/servicesComponents/Services'
 import ITSupport from '../components/itSupport/ITSupport'
 import FeedBack from '../components/feedback/FeedBack'
+import CompanyVideo from '../components/companyVideo/CompanyVideo'
 
 const page = () => {
   return (
@@ -14,7 +15,8 @@ const page = () => {
       <CompanyOverview/>
       <Services/>
       <ITSupport/>
-      <FeedBack/>
+      {/* <FeedBack/> */}
+      <CompanyVideo/>
     </div>
   )
 }
