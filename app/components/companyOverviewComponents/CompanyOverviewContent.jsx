@@ -6,6 +6,7 @@ import AnimationIcon from "@mui/icons-material/Animation";
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
 
+
 const CompanyOverviewContent = () => {
   const services = [
     {

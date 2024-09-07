@@ -14,14 +14,14 @@ const Services = () => {
       text: "Dolor sit amet consect etur",
     },
     {
-      id: 1,
+      id: 2,
       image: "/intro-v1-img5.jpg",
       icon: StarPurple500Icon,
       title: "Trusted Agency",
       text: "Dolor sit amet consect etur",
     },
     {
-      id: 1,
+      id: 3,
       image: "/intro-v1-img6.jpg",
       icon: LaptopMacIcon,
       title: "IT Outsourcing",
