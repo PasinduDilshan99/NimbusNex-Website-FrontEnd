@@ -5,6 +5,7 @@ import Services from "./components/servicesComponents/Services";
 import OurServices from "./components/ourServices/OurServices";
 import ITSupport from "./components/itSupport/ITSupport";
 import FeedBack from "./components/feedback/FeedBack";
+import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
 
 export default function Home() {
   return (
@@ -27,8 +28,11 @@ export default function Home() {
       <div>
         <ITSupport />
       </div>
-      <div>
+      {/* <div>
         <FeedBack/>
+      </div> */}
+      <div>
+        <RecentProjectArea/>
       </div>
     </main>
   );
