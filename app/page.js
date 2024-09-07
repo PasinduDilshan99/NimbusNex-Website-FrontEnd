@@ -12,6 +12,7 @@ import NewPosts from "./components/newPosts/NewPosts";
 import "leaflet/dist/leaflet.css";
 import Map from "./components/map/Map";
 import Footer from "./components/footer/Footer";
+import LocationDetails from "./components/locationDetails/LocationDetails";
 
 export default function Home() {
   return (
@@ -53,10 +54,19 @@ export default function Home() {
       <div>
         <NewPosts />
       </div>
-      <div>
-        <Map />
+      <div className="relative">
+        <div className="z-0">
+          {/* <Map /> */}
+        </div>
+        <div className="absolute w-full z-20 -bottom-10">
+          <div className="flex justify-center w-full ">
+            <LocationDetails />
+          </div>
+        </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </main>
   );
 }
