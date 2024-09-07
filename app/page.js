@@ -8,6 +8,7 @@ import FeedBack from "./components/feedback/FeedBack";
 import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
 import OurWorkProcess from "./components/ourWorkProcess/OurWorkProcess";
 import ITServiceCustomize from "./components/itServiceCustomize/ITServiceCustomize";
+import NewPosts from "./components/newPosts/NewPosts";
 
 export default function Home() {
   return (
@@ -45,6 +46,9 @@ export default function Home() {
       </div>
       <div>
         <OurWorkProcess />
+      </div>
+      <div>
+        <NewPosts />
       </div>
     </main>
   );
