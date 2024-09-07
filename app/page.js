@@ -6,6 +6,7 @@ import OurServices from "./components/ourServices/OurServices";
 import ITSupport from "./components/itSupport/ITSupport";
 import FeedBack from "./components/feedback/FeedBack";
 import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
+import OurWorkProcess from "./components/ourWorkProcess/OurWorkProcess";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
       </div> */}
       <div>
         <RecentProjectArea/>
+      </div>
+      <div>
+        <OurWorkProcess/>
       </div>
     </main>
   );
