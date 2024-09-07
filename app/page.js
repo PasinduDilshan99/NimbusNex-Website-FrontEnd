@@ -9,9 +9,9 @@ import RecentProjectArea from "./components/recentProjects/RecentProjectArea";
 import OurWorkProcess from "./components/ourWorkProcess/OurWorkProcess";
 import ITServiceCustomize from "./components/itServiceCustomize/ITServiceCustomize";
 import NewPosts from "./components/newPosts/NewPosts";
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
 import Map from "./components/map/Map";
-
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -54,8 +54,9 @@ export default function Home() {
         <NewPosts />
       </div>
       <div>
-        <Map/>
+        <Map />
       </div>
+      <Footer />
     </main>
   );
 }
