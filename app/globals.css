@@ -111,6 +111,16 @@ body {
   }
 }
 
+/* Custom CSS for sequential animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .animate-ripple {
   position: absolute;
   width: 100%;
@@ -118,6 +128,36 @@ body {
   border-radius: 9999px;
   background-color: rgba(255, 178, 55, 0.5);
   animation: ripple 2s infinite;
+}
+
+/* Custom CSS for sequential animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.icon-animation {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.icon-1 {
+  animation-delay: 0s; /* No delay for the first icon */
+}
+
+.icon-2 {
+  animation-delay: 2s; /* 2 seconds delay for the second icon */
+}
+
+.icon-3 {
+  animation-delay: 4s; /* 4 seconds delay for the third icon */
+}
+
+.icon-4 {
+  animation-delay: 6s; /* 6 seconds delay for the fourth icon */
 }
 
 @layer utilities {
