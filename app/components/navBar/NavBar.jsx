@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import NavBarSocialMediaLinks from "./NavBarSocialMediaLinks";
 import EmailIcon from "@mui/icons-material/Email";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
@@ -7,6 +8,11 @@ import Image from "next/image";
 import NavBarBottomComponent from "./NavBarBottomComponent";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const navBarMiddleComponentValues = [
     {
       id: 1,
