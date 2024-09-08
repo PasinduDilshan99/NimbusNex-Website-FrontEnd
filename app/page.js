@@ -13,6 +13,7 @@ import "leaflet/dist/leaflet.css";
 import Map from "./components/map/Map";
 import Footer from "./components/footer/Footer";
 import LocationDetails from "./components/locationDetails/LocationDetails";
+import OurTeam from "./components/ourTeam/Ourteam";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
         <ITSupport />
       </div>
       <div>
-        <FeedBack/>
+        <FeedBack />
       </div>
       <div className="relative">
         <div>
