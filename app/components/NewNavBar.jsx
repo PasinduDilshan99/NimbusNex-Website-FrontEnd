@@ -22,7 +22,7 @@ const NewNavBar = () => {
   }, []);
 
   return (
-    <div >
+    <div className=''>
       <div
         className={`w-full transition-opacity duration-1000 ease-in-out ${
           scrolling ? 'opacity-0' : 'opacity-100'
