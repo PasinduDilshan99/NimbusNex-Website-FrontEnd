@@ -5,6 +5,14 @@
 .abc {
   border: 2px solid black;
 }
+.def {
+  border: 2px solid white;
+}
+
+.ghi {
+  border: 2px solid red;
+}
+
 
 :root {
   --foreground-rgb: 0, 0, 0;

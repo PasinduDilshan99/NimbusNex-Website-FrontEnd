@@ -25,8 +25,8 @@ const NavBarBottomComponent = () => {
         ))}
       </div>
       <div className="flex px-3">
-        <div className="px-7 bg-[#ffb237] p-2 mx-4 rounded-xl hover:bg-white hover:text-black">Contact Us</div>
-        <div className="p-2 ">
+        <div className="px-7  bg-[#ffb237] p-2 mx-4 rounded-xl hover:bg-white hover:text-black">Contact Us</div>
+        <div className="p-2">
           <SearchIcon />
         </div>
       </div>

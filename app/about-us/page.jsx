@@ -16,7 +16,7 @@ import NewNavBar from "../components/NewNavBar";
 const page = () => {
   const headerDetails = {title:"About Us", content:"Home / About Us"}
   return (
-    <div>
+    <div className="md:mt-56 mt-20">
       <div>
         <NewNavBar />
       </div>
