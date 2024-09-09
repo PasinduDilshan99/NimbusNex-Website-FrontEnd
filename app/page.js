@@ -17,10 +17,10 @@ import OurTeam from "./components/ourTeam/Ourteam";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative bg-[#fffbe3] text-black">
-      <div className="z-20 relative">
+    <main className="min-h-screen relative bg-[#fffbe3] text-black mt-36 md:mt-56">
+      {/* <div className="z-20 relative">
         <NavBar />
-      </div>
+      </div> */}
       <div className="-mt-10 z-10 relative">
         <TopSlider />
       </div>

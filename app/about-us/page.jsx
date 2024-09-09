@@ -17,9 +17,9 @@ const page = () => {
   const headerDetails = {title:"About Us", content:"Home / About Us"}
   return (
     <div className="md:mt-56 mt-20">
-      <div>
+      {/* <div>
         <NewNavBar />
-      </div>
+      </div> */}
       <div>
         <TopImage props={headerDetails}/>
       </div>
