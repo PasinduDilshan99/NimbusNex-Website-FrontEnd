@@ -10,15 +10,18 @@ import TechnologicalObstacles from "../components/technologicalObstacles/technol
 import OurTeam from "../components/ourTeam/OurTeam";
 import LocationDetails from "../components/locationDetails/LocationDetails";
 import Footer from "../components/footer/Footer";
+import ScrollNavBar from "../components/scrollNavBar/ScrollNavBar";
+import NewNavBar from "../components/NewNavBar";
 
 const page = () => {
+  const headerDetails = {title:"About Us", content:"Home / About Us"}
   return (
     <div>
       <div>
-        <NavBar />
+        <NewNavBar />
       </div>
       <div>
-        <TopImage />
+        <TopImage props={headerDetails}/>
       </div>
       <div>
         <CompanyOverview />

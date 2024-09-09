@@ -1,32 +1,14 @@
 "use client";
-import React, { useState } from "react";
-import NavBarSocialMediaLinks from "./NavBarSocialMediaLinks";
-import EmailIcon from "@mui/icons-material/Email";
-import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
-import NavBarMiddleComponent from "./NavBarMiddleComponent";
 import Image from "next/image";
-import NavBarBottomComponent from "./NavBarBottomComponent";
+import React, { useState } from "react";
 
-const NavBar = () => {
+const ScrollNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const navBarMiddleComponentValues = [
-    {
-      id: 1,
-      icon: EmailIcon,
-      text: "You may send an email",
-      value: "abc@gmail.com",
-    },
-    {
-      id: 2,
-      icon: QueryBuilderIcon,
-      text: "Sunday - Closed",
-      value: "Mon - Sat(9.00 - 6.00)",
-    },
-  ];
+
   const links = [
     { id: 1, text: "Services", link: "/" },
     { id: 2, text: "About", link: "/about-us" },
@@ -37,39 +19,30 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 backdrop-blur-md p-4 z-50  text-white">
-      <div className="flex justify-between mx-20 bg-gray-200 ">
-        <div className="flex bg-[#ffb237] px-4">
-          <div className="justify-center content-center">
-            <Image src="/company-logo.png" width={40} height={40} alt="logo" />
+    <div className="fixed top-0 left-0 right-0 backdrop-blur-md p-4 z-50  text-white bg-black">
+      <div className="container mx-auto flex justify-between items-center ">
+        <button className="bg-[#ffb237] text-lg font-bold rounded px-6 py-3 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+          <div className="flex items-center">
+            <div>
+              <Image
+                src="/company-logo.png"
+                width={40}
+                height={40}
+                alt="logo"
+              />
+            </div>
+            <div className="px-4">NimbusNex</div>
           </div>
-          <div className="justify-center content-center">NimbusNex</div>
-        </div>
-        <div className="hidden md:flex">
-          <div>
-            <NavBarMiddleComponent
-              props={{
-                icon: navBarMiddleComponentValues[0].icon,
-                text: navBarMiddleComponentValues[0].text,
-                value: navBarMiddleComponentValues[0].value,
-              }}
-            />
-          </div>
-          <div>
-            <NavBarMiddleComponent
-              props={{
-                icon: navBarMiddleComponentValues[1].icon,
-                text: navBarMiddleComponentValues[1].text,
-                value: navBarMiddleComponentValues[1].value,
-              }}
-            />
-          </div>
-          <div className="flex justify-center content-center">
-            <NavBarSocialMediaLinks />
-          </div>
-        </div>
-        <div className="hidden md:flex mx-20">
-          <NavBarBottomComponent />
+        </button>
+
+        <div className="hidden md:flex space-x-10 px-4">
+          {links.map((link) => (
+            <div key={link.id}>
+              <a href={link.link} className="hover:text-[#ffb237]">
+                {link.text}
+              </a>
+            </div>
+          ))}
         </div>
         <button
           className="md:hidden"
@@ -107,6 +80,7 @@ const NavBar = () => {
           </svg>
         </button>
       </div>
+
       {isMenuOpen && (
         <div
           id="mobile-menu"
@@ -126,4 +100,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default ScrollNavBar;

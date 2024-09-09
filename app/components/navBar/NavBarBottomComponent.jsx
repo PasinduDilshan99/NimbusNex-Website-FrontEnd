@@ -5,11 +5,11 @@ const NavBarBottomComponent = () => {
   const links = [
     { id: 1, text: "Demos", link: "/" },
     { id: 2, text: "Services", link: "/" },
-    { id: 3, text: "About", link: "/" },
+    { id: 3, text: "About", link: "/about-us" },
     { id: 4, text: "Projects", link: "/" },
     { id: 5, text: "Page", link: "/" },
     { id: 6, text: "Blog", link: "/" },
-    { id: 7, text: "Contact", link: "/" },
+    { id: 7, text: "Contact", link: "/contact-us" },
   ];
   return (
     <div className="flex justify-between text-white bg-black p-4">

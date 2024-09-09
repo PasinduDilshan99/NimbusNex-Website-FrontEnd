@@ -1,5 +1,4 @@
 import React from "react";
-import TeamMemberSocialMediaLinks from "./TeamMemberSocialMediaLinks";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
