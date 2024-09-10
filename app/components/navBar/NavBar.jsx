@@ -10,6 +10,24 @@ import NavBarBottomComponent from "./NavBarBottomComponent";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const currentDate = new Date();
+  const currentDay = currentDate.getDay();
+  const isWeekend = currentDay === 0 || currentDay === 6;
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const status = isWeekend ? "Closed" : "Open";
+  const openHours = isWeekend
+    ? "Mon - Fri (9.00 - 22.00)"
+    : `${days[currentDay]} (9.00 - 22.00)`;
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -23,8 +41,8 @@ const NavBar = () => {
     {
       id: 2,
       icon: QueryBuilderIcon,
-      text: "Sunday - Closed",
-      value: "Mon - Sat(9.00 - 6.00)",
+      text: `${days[currentDay]} - ${status}`,
+      value: openHours,
     },
   ];
   const links = [
@@ -37,38 +55,40 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 backdrop-blur-md md:p-4 py-4 z-50  text-white md:flex md:justify-center">
-      <div className="flex justify-between px-4 items-center ">
-        <div className="md:grid md:grid-rows-2"> 
-          <div className="flex justify-between md:mx-20">
+    <div className="fixed top-0 left-0 right-0 backdrop-blur-md z-50  text-black lg:flex lg:justify-center bg-[#fffbe3] w-full">
+      <div className="flex justify-between px-4 items-center w-full">
+        <div className="md:grid md:grid-rows-[auto] w-full">
+          <div className="flex justify-between md:mx-20 ">
             {/* LOGO */}
-            <div className="flex bg-[#ffb237] px-4 rounded-lg">
+            <div className="flex bg-[#ffb237] m-6 md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105  ">
               <div className="justify-center content-center">
                 <Image
                   src="/company-logo.png"
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   alt="logo"
+                  className="mr-2"
                 />
               </div>
-              <div className="justify-center content-center">NimbusNex</div>
+              <div className="justify-center content-center text-xl hover:font-semibold duration-100">
+                NimbusNex
+              </div>
             </div>
             {/* MIDDLE COMPONENT */}
-            <div className="hidden md:flex">
+            <div className="hidden lg:flex lg:justify-between">
               {navBarMiddleComponentValues.map((navBarMiddleComponentValue) => (
                 <div key={navBarMiddleComponentValue.id}>
                   <NavBarMiddleComponent props={navBarMiddleComponentValue} />
                 </div>
               ))}
-              <div className="flex justify-center content-center">
-                <NavBarSocialMediaLinks />
-              </div>
+            </div>
+            <div className="hidden md:flex justify-center content-center">
+              <NavBarSocialMediaLinks />
             </div>
           </div>
           {/* BOTTOM COMPONENT */}
           <div className="hidden md:flex md:mx-20">
             <div className="w-full">
-              {" "}
               <NavBarBottomComponent />
             </div>
           </div>

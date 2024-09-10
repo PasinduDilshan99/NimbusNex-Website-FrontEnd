@@ -13,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <header className="md:mt-56 mt-20">
+      <body className={inter.className}>
         <NewNavBar />
-      </header> */}
-      <body className={inter.className}>{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
