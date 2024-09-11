@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NewNavBar />
-        {children}
+        <div className="min-h-[100vh] relative bg-[#fffbe3] text-black mt-36 md:mt-56 ">
+          {" "}
+          {children}
+        </div>
       </body>
     </html>
   );
