@@ -89,7 +89,6 @@ body {
   animation: textBottomCome 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 @keyframes topSliderImageZoom {
   0% {
     transform: scale(1);
@@ -114,7 +113,7 @@ body {
 }
 
 .image-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -128,8 +127,6 @@ body {
   position: relative;
   z-index: 2;
 }
-
-
 
 @keyframes textBottomCome {
   0% {
@@ -145,7 +142,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 @keyframes vibrate {
   0% {
@@ -342,3 +338,19 @@ body {
   transform: scale(1.5);
   opacity: 0;
 }
+
+.imageZoom:hover {
+  animation: imageZoomOut 2s ease-in;
+}
+
+@keyframes imageZoomOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); 
+    transform-origin: center; 
+  }
+}
+

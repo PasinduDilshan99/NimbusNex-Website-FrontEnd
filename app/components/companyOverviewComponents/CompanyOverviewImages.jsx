@@ -15,7 +15,7 @@ const CompanyOverviewImages = () => {
           width={500}
           height={500}
           alt="Image description"
-          className="w-full h-auto"
+          className="w-full h-auto imageZoom"
         />
 
         <div className="absolute -top-7 -left-7 z-20 m-2">
