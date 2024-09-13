@@ -24,14 +24,22 @@ const TopSlider = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animateText, setAnimateText] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % changes.length);
+      setAnimateText(true);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [changes.length]);
+
+  useEffect(() => {
+    setAnimateText(true);
+    const timer = setTimeout(() => setAnimateText(false), 1000);
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
 
   const currentChange = changes[currentIndex];
 
@@ -48,19 +56,23 @@ const TopSlider = () => {
   };
 
   return (
-    <div
-      className="w-full bg-cover bg-center py-24 "
-      style={{ backgroundImage: `url(${currentChange.image})` }}
-    >
-      <div className="flex justify-between items-center">
-        <div className="m-10 bg-yellow-300 p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
+<div
+  className={`image-container w-full bg-cover bg-center py-24 ${animateText ? "topSliderImageZoom" : ""}`}
+  style={{ backgroundImage: `url(${currentChange.image})`, transform: "scale(1.1)" }}
+>
+      <div className="flex justify-between items-center image-content">
+        <div className="m-24 bg-yellow-300 p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-3000 ease-in-out">
           <button onClick={handlePrevious}>
             <ArrowBackIosIcon />
           </button>
         </div>
         <div className="flex flex-col py-6">
           <div className="flex justify-center">
-            <div className="bg-white p-3 rounded-full hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out">
+            <div
+              className={`bg-white p-3 rounded-full hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out ${
+                animateText ? "text-animate" : ""
+              }`}
+            >
               <Image
                 src="/company-logo.png"
                 width={30}
@@ -69,11 +81,19 @@ const TopSlider = () => {
               />
             </div>
           </div>
-          <div className="text-7xl flex my-8 justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out">
+          <div
+            className={`text-7xl flex my-8 justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out ${
+              animateText ? "text-top-animate" : ""
+            }`}
+          >
             {currentChange.text}
           </div>
-          <div className="flex justify-center text-2xl py-4">
-            <div className="py-4 px-7 bg-[#ffb237] mx-4 rounded-xl hover:bg-white hover:text-black transition-colors duration-1000 ease-in-out  hover:scale-105">
+          <div
+            className={`flex justify-center text-2xl py-4 ${
+              animateText ? "text-bottom-animate" : ""
+            }`}
+          >
+            <div className="py-4 px-7 bg-[#ffb237] mx-4 rounded-xl hover:bg-white hover:text-black transition-colors duration-1000 ease-in-out hover:scale-105">
               View Our Services
             </div>
             <div className="py-4 px-7 bg-white text-black mx-4 rounded-xl hover:bg-[#ffb237] hover:text-white transition-colors duration-1000 ease-in-out hover:scale-105">
@@ -81,7 +101,7 @@ const TopSlider = () => {
             </div>
           </div>
         </div>
-        <div className="m-10 bg-yellow-300 p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
+        <div className="m-24 bg-yellow-300 p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
           <button onClick={handleNext}>
             <ArrowForwardIosIcon />
           </button>
