@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import TopSearchBar from "../topSearchBar/TopSearchBar";
 
 const NavBarBottomComponent = () => {
+  const [searchBarStatus, setSearchBarStatus] = useState(false);
+
   const links = [
     { id: 1, text: "Services", link: "/" },
     { id: 2, text: "About", link: "/about-us" },
@@ -27,10 +31,16 @@ const NavBarBottomComponent = () => {
         <div className="px-7  bg-[#ffb237] p-2 mx-4 rounded-xl hover:bg-white hover:text-black ">
           Contact Us
         </div>
-        <div className="p-2">
+        <div
+          className="p-2"
+          onClick={() => {
+            setSearchBarStatus(!searchBarStatus);
+          }}
+        >
           <SearchIcon />
         </div>
       </div>
+      {searchBarStatus && <TopSearchBar />}
     </div>
   );
 };
