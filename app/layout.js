@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+// _app.js or _app.tsx
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import NavBar from "./components/navBar/NavBar";
 import NewNavBar from "./components/NewNavBar";
 
