@@ -5,6 +5,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 import "../../css/topSlider/topSlider.css";
 import WhiteBottomToTop from "../buttons/WhiteBottomToTop";
+import YellowTopToBottom from "../buttons/YellowTopToBottom";
+import YellowBottomToTop from "../buttons/YellowBottomToTop";
 
 const TopSlider = () => {
   const changes = [
@@ -58,15 +60,16 @@ const TopSlider = () => {
   };
 
   return (
+    <div   style={{ backgroundImage: `url(${currentChange.image})` }}>
     <div
-      className={`image-container w-full bg-cover bg-center scale-110 py-24 ${
-        animateText ? "topSliderImageZoom" : ""
+      className={` image-container w-full bg-cover  bg-center scale-110 py-24 ${
+        animateText ? "topSliderImageEntry topSliderImageZoom " : ""
       }`}
       style={{ backgroundImage: `url(${currentChange.image})` }}
     >
       <div className="flex justify-between items-center image-content">
         <div
-          className={`m-24 bg-white p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-3000 ease-in-out `}
+          className={`hidden m-24 bg-white p-3 md:flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-3000 ease-in-out `}
         >
           <button onClick={handlePrevious}>
             <ArrowBackIosIcon />
@@ -88,31 +91,32 @@ const TopSlider = () => {
             </div>
           </div>
           <div
-            className={`text-7xl flex my-8 justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out ${
+            className={`text-4xl md:text-5xl lg:text-7xl capitalize flex my-8 px-4 justify-center content-center text-center font-bold text-white hover:text-amber-500 transition-colors duration-1000 ease-in-out ${
               animateText ? "text-top-animate" : ""
             }`}
           >
             {currentChange.text}
           </div>
           <div
-            className={`flex justify-center items-center text-2xl py-4  ${
+            className={`flex flex-col lg:flex-row justify-center items-center text-2xl py-4 grow ${
               animateText ? "text-bottom-animate" : ""
             }`}
           >
-            <div className="py-4  px-7 mx-4 ">
+            <div className="p-4 mx-4 ">
               <WhiteBottomToTop props={{ text: "  View Our Services" }} />
             </div>
-            <div className="py-4 px-7 bg-white text-black mx-4 rounded-xl hover:bg-[#ffb237] hover:text-white transition-colors duration-1000 ease-in-out hover:scale-105">
-              Learn More
+            <div className="p-4 ">
+              <YellowBottomToTop props={{ text: "Learn More" }} />
             </div>
           </div>
         </div>
-        <div className="m-24 bg-white p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
+        <div className="hidden md:flex m-24 bg-white p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">
           <button onClick={handleNext}>
             <ArrowForwardIosIcon />
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

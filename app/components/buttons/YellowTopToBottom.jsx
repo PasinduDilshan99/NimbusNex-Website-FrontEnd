@@ -1,12 +1,12 @@
 import React from "react";
 import "./buttons.css";
 
-const WhiteTopToBottom = ({ props }) => {
+const YellowTopToBottom = ({ props }) => {
   return (
-    <div className="absolute">
-      <button className="btn btn4">{props.text}</button>
+    <div className="">
+      <button className="btn btn1 rounded-xl py-3">{props.text}</button>
     </div>
   );
 };
 
-export default WhiteTopToBottom;
+export default YellowTopToBottom;

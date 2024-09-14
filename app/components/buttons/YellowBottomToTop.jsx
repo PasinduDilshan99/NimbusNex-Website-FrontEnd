@@ -3,8 +3,8 @@ import './buttons.css'
 
 const YellowBottomToTop = ({props}) => {
   return (
-    <div className="absolute">
-      <button className="btn btn4">{props.text}</button>
+    <div className="">
+      <button className="btn btn2 rounded-xl py-3 px-7">{props.text}</button>
     </div>
   );
 };
