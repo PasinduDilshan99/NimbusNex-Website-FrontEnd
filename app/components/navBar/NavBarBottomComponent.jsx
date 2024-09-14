@@ -30,7 +30,7 @@ const NavBarBottomComponent = () => {
   }, []);
 
   return (
-    <div className="flex justify-between items-center text-white bg-black p-2 text-lg w-full">
+    <div className="flex justify-between items-center text-white bg-black p-2 text-lg w-full def">
       <div className="flex lg:w-[60%] w-[80%]">
         {links.map((link) => (
           <a

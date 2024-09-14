@@ -8,8 +8,8 @@ const Logo = () => {
       style={{ visibility: 'visible' }} // Tailwind CSS doesn't handle visibility directly
     >
       <svg
-        viewBox="0 0 200 100"
-        className="w-28 md:w-32 lg:w-36 xl:w-44"
+        viewBox="0 0 10 50"
+        className="w-44 h-12"
       >
         <text
           x="50%"
@@ -19,7 +19,7 @@ const Logo = () => {
           dy=".3em"
           style={{
             stroke: 'black',
-            animation: 'animate-stroke 3s infinite alternate',
+            animation: 'animate-stroke 5s infinite alternate',
           }}
         >
           NimbusNex
