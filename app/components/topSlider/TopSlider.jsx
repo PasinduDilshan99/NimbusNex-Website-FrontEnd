@@ -57,8 +57,9 @@ const TopSlider = () => {
 
   return (
 <div
-  className={`image-container w-full bg-cover bg-center py-24 ${animateText ? "topSliderImageZoom" : ""}`}
-  style={{ backgroundImage: `url(${currentChange.image})`, transform: "scale(1.1)" }}
+  // className={`image-container w-full bg-cover bg-center py-24 ${animateText ? "topSliderImageZoom" : ""}`}
+  className={`image-container w-full bg-cover bg-center py-24 `}
+  style={{ backgroundImage: `url(${currentChange.image})`}}
 >
       <div className="flex justify-between items-center image-content">
         <div className="m-24 bg-yellow-300 p-3 flex flex-col justify-center hover:bg-[#ffb237] rounded-xl transition-colors duration-3000 ease-in-out">
