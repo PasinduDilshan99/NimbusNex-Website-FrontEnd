@@ -1,10 +1,10 @@
 import React from "react";
 import "./buttons.css";
 
-const WhiteBottomToTop = ({props}) => {
+const WhiteBottomToTop = ({ props }) => {
   return (
-    <div className="absolute">
-      <button className="btn btn3">{props.text}</button>
+    <div className="">
+      <button className="btn btn3 rounded-xl">{props.text}</button>
     </div>
   );
 };
