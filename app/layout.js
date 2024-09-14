@@ -1,11 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-// _app.js or _app.tsx
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import NavBar from "./components/navBar/NavBar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import NewNavBar from "./components/NewNavBar";
+import CustomCursor from "./CustomCursor ";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NewNavBar />
+        <CustomCursor/>
         <div className="min-h-[100vh] relative bg-[#fffbe3] text-black mt-36 md:mt-56 ">
-          {" "}
           {children}
         </div>
       </body>
