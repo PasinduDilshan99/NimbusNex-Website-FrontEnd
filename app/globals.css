@@ -2,11 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .cursor-dot {
   width: 5px;
   height: 5px;
   background-color: #ffb237;
 }
+
+.aa {
+  color: white; /* Original text color */
+  position: relative;
+  background: #000;
+  font-size: 40px;
+  overflow: hidden; /* Ensure the pseudo-element covers the text */
+}
+
+.aa::before {
+  content: "ABCDEF GHIJK";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  color: white; /* Text color for the pseudo-element */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px; /* Ensure it matches the original text size */
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  z-index: 1; /* Ensure it's on top */
+}
+
+.aa:hover {
+  color: transparent; /* Hide the original text color on hover */
+}
+
+.aa:hover::before {
+  opacity: 1; /* Show the pseudo-element text on hover */
+}
+
 
 .cursor-outline {
   width: 30px;
@@ -25,7 +61,31 @@
   pointer-events: none;
 }
 
+@keyframes textComeFromTop {
+  from {
+    transform: translateY(-250px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
+.textComeFromTop {
+  animation: textComeFromTop 0.6s ease-out 0.5s;
+}
+
+.socialMediaLinkHover:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.25);
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 30%;
+}
+
+.socialMediaLinkHover {
+  transition: all 0.5s ease-out;
+}
 
 .abc {
   border: 2px solid black;
@@ -105,7 +165,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 .text-top-animate {
   animation: textTopCome 3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -271,7 +330,7 @@ body {
     text-wrap: balance;
   }
 }
-
+/* 
 .btn {
   width: 200px;
   padding: 1rem 3rem;
@@ -307,7 +366,7 @@ body {
 
 .btn:hover {
   color: black;
-}
+} */
 
 .sliderContainer {
   width: 100%;
@@ -315,7 +374,7 @@ body {
   padding: 20px;
 }
 
-.btn1 {
+/* .btn1 {
   width: 200px;
   background-color: #fff;
   color: #777;
@@ -359,7 +418,7 @@ body {
 .btn1:hover::after {
   transform: scale(1.5);
   opacity: 0;
-}
+} */
 
 .imageZoom:hover {
   animation: imageZoomOut 2s ease-in;
@@ -371,8 +430,8 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(0.9); 
-    transform-origin: center; 
+    transform: scale(0.9);
+    transform-origin: center;
   }
 }
 
@@ -398,3 +457,6 @@ figcaption::before{
   transition-duration: var(--def-transition-duration);
   transition-timing-function: ease-in-out;
 } */
+
+
+

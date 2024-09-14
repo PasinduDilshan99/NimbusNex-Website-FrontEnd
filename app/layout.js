@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <NewNavBar />
         <CustomCursor/>
-        <div className="min-h-[100vh] relative bg-[#fffbe3] text-black mt-36 md:mt-56 ">
+        <div className="relative bg-[#fffbe3] text-black mt-36 md:mt-56 ">
           {children}
         </div>
       </body>

@@ -6,6 +6,7 @@ import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import NavBarMiddleComponent from "./NavBarMiddleComponent";
 import Image from "next/image";
 import NavBarBottomComponent from "./NavBarBottomComponent";
+import Logo from "../logo/Logo";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,29 +56,28 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 backdrop-blur-md z-50  text-black lg:flex lg:justify-center bg-[#fffbe3] w-full">
+    <div className="fixed top-0 left-0 right-0 backdrop-blur-md z-50  text-black lg:flex lg:justify-center bg-[#fffbe3] w-full textComeFromTop">
       <div className="flex justify-between px-4 items-center w-full">
         <div className="md:grid md:grid-rows-[auto] w-full">
           <div className="flex justify-between md:mx-20 ">
             {/* LOGO */}
-            <div className="flex bg-[#ffb237] m-6 md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105  ">
+            <div className="flex bg-[#ffb237] m-6 md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105 ">
               <div className="justify-center content-center">
                 <Image
                   src="/company-logo.png"
                   width={30}
                   height={30}
                   alt="logo"
-                  className="mr-2"
                 />
               </div>
               <div className="justify-center content-center text-xl hover:font-semibold duration-100">
-                NimbusNex
+             <Logo/>
               </div>
             </div>
             {/* MIDDLE COMPONENT */}
-            <div className="hidden lg:flex lg:justify-between">
+            <div className="hidden xl:flex lg:justify-between">
               {navBarMiddleComponentValues.map((navBarMiddleComponentValue) => (
-                <div key={navBarMiddleComponentValue.id}>
+                <div key={navBarMiddleComponentValue.id} className="flex justify-center">
                   <NavBarMiddleComponent props={navBarMiddleComponentValue} />
                 </div>
               ))}
