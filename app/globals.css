@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffb237;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 3px solid hsla(37, 100%, 61%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
+
 .abc {
   border: 2px solid black;
 }
@@ -81,6 +106,7 @@ body {
   }
 }
 
+
 .text-top-animate {
   animation: textTopCome 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -89,14 +115,9 @@ body {
   animation: textBottomCome 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 @keyframes topSliderImageZoom {
   0% {
     transform: scale(1);
-  }
-
-  80% {
-    transform: scale(1.1);
   }
 
   100% {
@@ -105,7 +126,7 @@ body {
 }
 
 .topSliderImageZoom {
-  animation: topSliderImageZoom 3s ease forwards;
+  animation: topSliderImageZoom 3s ease alternate;
 }
 
 .image-container {
@@ -114,7 +135,7 @@ body {
 }
 
 .image-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -128,8 +149,6 @@ body {
   position: relative;
   z-index: 2;
 }
-
-
 
 @keyframes textBottomCome {
   0% {
@@ -145,7 +164,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 @keyframes vibrate {
   0% {
@@ -342,3 +360,41 @@ body {
   transform: scale(1.5);
   opacity: 0;
 }
+
+.imageZoom:hover {
+  animation: imageZoomOut 2s ease-in;
+}
+
+@keyframes imageZoomOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); 
+    transform-origin: center; 
+  }
+}
+
+.gradient-hover:hover {
+  background: linear-gradient(rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+}
+/* 
+
+figcaption::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+  opacity: 0;
+  transition-property: opacity;
+}
+
+figure:hover figcaption:before{
+  opacity: 1;
+}
+
+figcaption::before{
+  transition-duration: var(--def-transition-duration);
+  transition-timing-function: ease-in-out;
+} */
