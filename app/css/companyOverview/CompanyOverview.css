@@ -1,0 +1,60 @@
+.companyLogoAnimation {
+  animation: companyLogoAnimation 3s infinite, companyLogoAnimation1 5s infinite;
+}
+
+@keyframes companyLogoAnimation {
+  0% {
+    transform: scale(1);
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+    transform: rotate(240deg);
+  }
+
+  100% {
+    transform: scale(1.25);
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes companyLogoAnimation1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.yellowBarAnimation {
+  animation: yellowBarKeyFrames 2s infinite alternate;
+}
+
+@keyframes yellowBarKeyFrames {
+  from {
+    height: 144px;
+    top: 0px;
+  }
+  to {
+    height: 40px;
+    top: 184px;
+  }
+}
+
+.blackBarAnimation {
+  animation: blackBarKeyframes 2s infinite alternate;
+}
+
+@keyframes blackBarKeyframes {
+  from {
+    height: 40px;
+    top: 184px;
+  }
+  to {
+    height: 144px;
+    top: 0px;
+  }
+}

@@ -9,7 +9,7 @@ const CompanyOverview = () => {
       <div>
         <CompanyOverviewImages />
       </div>
-      <div>
+      <div className="md:m-0 mt-10">
         <CompanyOverviewContent />
       </div>
     </div>
