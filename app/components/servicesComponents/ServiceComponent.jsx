@@ -4,7 +4,7 @@ import React from "react";
 const ServiceComponent = ({ props }) => {
   return (
     <div className="min-h-[300px] mb-10 relative">
-      <div>
+      <div className="flex justify-center">
         <Image
           src={props.image}
           width={350}

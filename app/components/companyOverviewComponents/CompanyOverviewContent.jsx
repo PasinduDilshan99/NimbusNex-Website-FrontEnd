@@ -1,13 +1,36 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import AccessibleForwardIcon from "@mui/icons-material/AccessibleForward";
 import CompanyOverviewService from "./CompanyOverviewService";
 import AnimationIcon from "@mui/icons-material/Animation";
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
-
+import "../../css/common/ComeText.css";
 
 const CompanyOverviewContent = () => {
+  const [isInView, setIsInView] = useState({
+    header: false,
+    intro: false,
+    service1: false,
+    service2: false,
+    project: false,
+    checkItem1: false,
+    checkItem2: false,
+    footer: false,
+  });
+
+  const refs = {
+    header: useRef(null),
+    intro: useRef(null),
+    service1: useRef(null),
+    service2: useRef(null),
+    project: useRef(null),
+    checkItem1: useRef(null),
+    checkItem2: useRef(null),
+    footer: useRef(null),
+  };
+
   const services = [
     {
       id: 1,
@@ -22,25 +45,88 @@ const CompanyOverviewContent = () => {
       text: "There are many variations of passages of lorem",
     },
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView((prevState) => ({
+              ...prevState,
+              [entry.target.dataset.id]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.keys(refs).forEach((key) => {
+      if (refs[key].current) {
+        observer.observe(refs[key].current);
+      }
+    });
+
+    return () => {
+      Object.keys(refs).forEach((key) => {
+        if (refs[key].current) {
+          observer.unobserve(refs[key].current);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-full flex  flex-col justify-start px-8">
-      <div className="flex ">
+    <div className={`min-h-full flex flex-col justify-start px-8`}>
+      {/* Header */}
+      <div className="flex" ref={refs.header} data-id="header">
         <div className="mr-4">
           <AnimationIcon />
         </div>
-        <div className="uppercase">introduce Company</div>
+        <div
+          className={`uppercase ${
+            isInView.header ? "showItem textComeFromRightToLeft" : "hideItem"
+          }`}
+        >
+          introduce Company
+        </div>
       </div>
-      <div className="capitalize text-4xl font-bold mt-3 ">
-        Our Company <br /> specializesin IT Solutions
+
+      {/* Intro */}
+      <div
+        className={`capitalize text-4xl font-bold mt-3 ${
+          isInView.intro ? "showItem textComeFromRightToLeft" : "hideItem"
+        }`}
+        ref={refs.intro}
+        data-id="intro"
+      >
+        Our Company <br /> specializes in IT Solutions
       </div>
-      <div className="text-lg mt-3">
+      <div
+        className={`text-lg mt-3 ${
+          isInView.intro ? "showItem textComeFromRightToLeft" : "hideItem"
+        }`}
+        ref={refs.intro}
+        data-id="intro"
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, Heres what to
         know about how to start a consulting business
       </div>
-      <div className=" p-4 flex mt-3">
+
+      {/* Services */}
+      <div className="p-4 flex mt-3">
         <div className="flex items-center">
-          <div className="flex flex-col  mr-4">
-            <div>
+          <div className="flex flex-col mr-4">
+            {/* Service 1 */}
+            <div
+              className={`${
+                isInView.service1
+                  ? "showItem textComeFromRightToLeft"
+                  : "hideItem"
+              }`}
+              ref={refs.service1}
+              data-id="service1"
+            >
               <CompanyOverviewService
                 props={{
                   icon: services[0].icon,
@@ -50,20 +136,37 @@ const CompanyOverviewContent = () => {
               />
             </div>
             <hr />
-            <div>
-              <div>
-                <CompanyOverviewService
-                  props={{
-                    icon: services[1].icon,
-                    title: services[1].title,
-                    text: services[1].text,
-                  }}
-                />
-              </div>
+            {/* Service 2 */}
+            <div
+              className={`${
+                isInView.service2
+                  ? "showItem textComeFromRightToLeft"
+                  : "hideItem"
+              }`}
+              ref={refs.service2}
+              data-id="service2"
+            >
+              <CompanyOverviewService
+                props={{
+                  icon: services[1].icon,
+                  title: services[1].title,
+                  text: services[1].text,
+                }}
+              />
             </div>
           </div>
+
+          {/* Project */}
           <div>
-            <div className="bg-[#ffb237] p-8 flex justify-center flex-col items-center">
+            <div
+              className={`bg-[#ffb237] p-8 flex justify-center flex-col items-center ${
+                isInView.project
+                  ? "showItem textComeFromRightToLeft"
+                  : "hideItem"
+              }`}
+              ref={refs.project}
+              data-id="project"
+            >
               <div className="h-16 w-16 rounded-full border-r-white border-8 flex items-center justify-center">
                 <div className="">90%</div>
               </div>
@@ -72,8 +175,19 @@ const CompanyOverviewContent = () => {
           </div>
         </div>
       </div>
+
+      {/* Check Items */}
       <div className="flex flex-col">
-        <div className="flex items-center p-2">
+        {/* Check Item 1 */}
+        <div
+          className={`flex items-center p-2 ${
+            isInView.checkItem1
+              ? "showItem textComeFromRightToLeft"
+              : "hideItem"
+          }`}
+          ref={refs.checkItem1}
+          data-id="checkItem1"
+        >
           <div className="bg-[#ffb237] rounded-full p-1 mx-2">
             <CheckIcon />
           </div>
@@ -81,18 +195,44 @@ const CompanyOverviewContent = () => {
             Nor again is there anyone who loves or pursues or desires to obtain
           </div>
         </div>
-        <div className="flex items-center p-2">
+        {/* Check Item 2 */}
+        <div
+          className={`flex items-center p-2 ${
+            isInView.checkItem2
+              ? "showItem textComeFromRightToLeft"
+              : "hideItem"
+          }`}
+          ref={refs.checkItem2}
+          data-id="checkItem2"
+        >
           <div className="bg-[#ffb237] rounded-full p-1 mx-2">
             <CheckIcon />
           </div>
-          <div>Nam libero tempore, cum soluta nobis est eligendi optio</div>
+          <div
+          >Nam libero tempore, cum soluta nobis est eligendi optio</div>
         </div>
       </div>
-      <div className="bg-[#ffb237] p-4 flex mt-2">
+
+      {/* Footer */}
+      <div
+        className={`bg-[#ffb237] p-4 flex mt-2 ${
+          isInView.footer ? "showItem textComeFromRightToLeft" : "hideItem"
+        }`}
+        ref={refs.footer}
+        data-id="footer"
+      >
         <div>
-          <Image src="/company-logo.png" width={30} height={30} alt="logo" className="mx-3" />
+          <Image
+            src="/company-logo.png"
+            width={30}
+            height={30}
+            alt="logo"
+            className="mx-3"
+          />
         </div>
-        <div className="text-xl">FOR YOUR IT BUSINESS, WE MADE THINGS EASIER</div>
+        <div className={`text-xl`} ref={refs.footer} data-id="footer">
+          FOR YOUR IT BUSINESS, WE MADE THINGS EASIER
+        </div>
       </div>
     </div>
   );

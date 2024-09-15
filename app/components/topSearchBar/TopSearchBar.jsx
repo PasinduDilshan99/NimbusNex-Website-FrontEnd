@@ -4,10 +4,8 @@ import SearchIcon from "@mui/icons-material/Search";
 const TopSearchBar = () => {
   return (
     <div className="relative h-[80vh] flex justify-center items-center">
-      {/* Blurred Background */}
       <div className="absolute top-0 left-0 w-full h-full bg-gray-100 backdrop-blur-md z-0"></div>
 
-      {/* Search Input and Icon */}
       <div className="relative flex w-[50vh] justify-center items-center border-2 z-10 bg-white">
         <input
           type="text"

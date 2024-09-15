@@ -21,7 +21,7 @@ export default function Home() {
       {/* <div className="z-20 relative">
         <NavBar />
       </div> */}
-      <div className="-mt-10 z-10 relative">
+      <div className="-mt-20 z-10 relative">
         <TopSlider />
       </div>
       <div>
