@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.cursor-dot {
-  width: 5px;
-  height: 5px;
-  background-color: #ffb237;
-}
-
 .aa {
   color: white; /* Original text color */
   position: relative;
@@ -43,11 +36,18 @@
   opacity: 1; /* Show the pseudo-element text on hover */
 }
 
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffb237;
+  animation: cursor-dot-animation 1s infinite alternate;
+}
 
 .cursor-outline {
   width: 30px;
   height: 30px;
   border: 3px solid hsla(37, 100%, 61%, 0.5);
+  animation: cursor-outline-animation 1s infinite alternate;
 }
 
 .cursor-dot,
@@ -59,6 +59,30 @@
   border-radius: 50%;
   z-index: 9999;
   pointer-events: none;
+}
+
+@keyframes cursor-outline-animation {
+  from {
+    width: 30px;
+    height: 30px;
+    border: 3px solid hsla(37, 100%, 61%, 0.5);
+  }
+  to {
+    width: 40px;
+    height: 40px;
+    border: 3px solid hsl(37, 100%, 61%);
+  }
+}
+
+@keyframes cursor-dot-animation {
+  from {
+    width: 5px;
+    height: 5px;
+  }
+  to {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 @keyframes textComeFromTop {
@@ -150,11 +174,6 @@ body {
   transform: translateX(20%);
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
-
-
-
-
-
 
 @keyframes vibrate {
   0% {
@@ -389,6 +408,3 @@ figcaption::before{
   transition-duration: var(--def-transition-duration);
   transition-timing-function: ease-in-out;
 } */
-
-
-
