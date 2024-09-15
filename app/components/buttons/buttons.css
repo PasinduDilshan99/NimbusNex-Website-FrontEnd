@@ -22,7 +22,7 @@
     color: #fff;
   }
   .btn3:hover,.btn4:hover{
-    color: #ffb237;
+    color: black;
   }
   .btn::before{
     content: "";

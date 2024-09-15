@@ -62,8 +62,8 @@ const TopSlider = () => {
   return (
     <div   style={{ backgroundImage: `url(${currentChange.image})` }}>
     <div
-      className={` image-container w-full bg-cover  bg-center scale-110 py-24 ${
-        animateText ? "topSliderImageEntry topSliderImageZoom " : ""
+      className={` image-container w-full bg-cover  bg-center md:scale-110 py-24 ${
+        animateText ? "topSliderImageEntry md:topSliderImageZoom " : ""
       }`}
       style={{ backgroundImage: `url(${currentChange.image})` }}
     >

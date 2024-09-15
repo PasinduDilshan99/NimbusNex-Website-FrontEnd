@@ -30,51 +30,49 @@ const Services = () => {
     },
   ];
 
-  const [isView, setIsView] = useState({
-    item: false,
-  });
+  // const [isView, setIsView] = useState({
+  //   item: false,
+  // });
 
-  const refs = {
-    item: useRef(null),
-  };
+  // const refs = {
+  //   item: useRef(null),
+  // };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsView((prevState) => ({
-              ...prevState,
-              [entry.target.dataset.id]: true,
-            }));
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setIsView((prevState) => ({
+  //             ...prevState,
+  //             [entry.target.dataset.id]: true,
+  //           }));
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.1 }
+  //   );
 
-    Object.keys(refs).forEach((key) => {
-      if (refs[key].current) {
-        observer.observe(refs[key].current);
-      }
-    });
+  //   Object.keys(refs).forEach((key) => {
+  //     if (refs[key].current) {
+  //       observer.observe(refs[key].current);
+  //     }
+  //   });
 
-    return () => {
-      Object.keys(refs).forEach((key) => {
-        if (refs[key].current) {
-          observer.unobserve(refs[key].current);
-        }
-      });
-    };
-  }, []);
+  //   return () => {
+  //     Object.keys(refs).forEach((key) => {
+  //       if (refs[key].current) {
+  //         observer.unobserve(refs[key].current);
+  //       }
+  //     });
+  //   };
+  // }, []);
 
   return (
     <div
-      className={`flex flex-col lg:flex-row md:justify-evenly md:items-center ${
-        isView.item ? "showItem textComeFromBottomToTop" : "hideItem"
-      }`}
-      ref={refs.item}
-      data-id="item"
+      className={`flex flex-col lg:flex-row md:justify-evenly md:items-center `}
+      // ref={refs.item}
+      // data-id="item"
     >
       {servicesData.map((serviceData) => (
         <div key={serviceData.id} className=" ">

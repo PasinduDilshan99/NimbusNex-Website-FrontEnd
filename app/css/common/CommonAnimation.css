@@ -1,0 +1,21 @@
+.circleRotation{
+    animation: circleRotation 3s infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes circleRotation {
+    0%,
+    50%,
+    100% {
+      transform: rotate(0);
+      color: #ffb237;
+    }
+    25% {
+      transform: rotate(180deg);
+      color: black;
+    }
+    75% {
+      transform: rotate(-180deg);
+      color: black;
+    }
+  }

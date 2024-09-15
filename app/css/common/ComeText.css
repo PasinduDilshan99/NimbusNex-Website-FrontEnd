@@ -1,31 +1,30 @@
 .hideItem {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
 
 .showItem {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
 
 .textComeFromLeftToRight {
-    animation: slideInFromLeft 0.5s ease-out forwards;
+  animation: slideInFromLeft 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
-  
+}
 
 .textComeFromRightToLeft {
-  animation: slideInFromRight 0.5s ease-out forwards;
+  animation: slideInFromRight 0.7s ease-out forwards;
 }
 
 @keyframes slideInFromRight {
@@ -38,29 +37,130 @@
 }
 
 .textComeFromTopToBottom {
-    animation: slideInFromTop 0.5s ease-out forwards;
-  }
-  
-  @keyframes slideInFromTop {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+  animation: slideInFromTop 0.7s ease-out forwards;
+}
 
-  .textComeFromBottomToTop {
-    animation: slideInFromBottom 0.5s ease-out forwards;
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
   }
-  
-  @keyframes slideInFromBottom {
-    0% {
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
   }
+}
 
-  
+.textComeFromBottomToTop {
+  animation: slideInFromBottom 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.textComeFromTopRight {
+  animation: slideInFromTopRight 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromTopRight {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromRightBottom {
+  animation: slideInFromRightBottom 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromRightBottom {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromBottomLeft {
+  animation: slideInFromBottomleft 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromBottomleft {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromLeftTop {
+  animation: slideInFromLeftTop 0.7s ease-out forwards;
+}
+
+@keyframes slideInFromLeftTop {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.titleAnimationLeftToRight {
+  width: 0;
+  height: 4px;
+  background-color: black;
+  animation: titleAnimationLeftToRight 2s alternate infinite;
+}
+
+@keyframes titleAnimationLeftToRight {
+  0% {
+    width: 0;
+    background-color: black;
+  }
+  50% {
+    background-color: #ffb237;
+  }
+  100% {
+    width: 100%;
+    background-color: black;
+  }
+}
+
+.popUpText {
+  animation: popUpText 0.2s ease-out forwards;
+}
+
+@keyframes popUpText {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slowPopUpText {
+  animation: popUpText 0.7s ease-out forwards;
+}
+
+@keyframes popUpText {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
