@@ -7,6 +7,7 @@ import AnimationIcon from "@mui/icons-material/Animation";
 import CheckIcon from "@mui/icons-material/Check";
 import Image from "next/image";
 import "../../css/common/ComeText.css";
+import "../../css/common/CommonAnimation.css";
 
 const CompanyOverviewContent = () => {
   const [isInView, setIsInView] = useState({
@@ -80,15 +81,20 @@ const CompanyOverviewContent = () => {
     <div className={`min-h-full flex flex-col justify-start px-8`}>
       {/* Header */}
       <div className="flex" ref={refs.header} data-id="header">
-        <div className="mr-4">
-          <AnimationIcon />
+        <div
+          className={`mr-4 ${
+            isInView.header ? "showItem textComeFromLeftToRight" : "hideItem"
+          }`}
+        >
+          <AnimationIcon className="circleRotation" />
         </div>
         <div
           className={`uppercase ${
             isInView.header ? "showItem textComeFromRightToLeft" : "hideItem"
           }`}
         >
-          introduce Company
+          <div className="titleAnimationLeftToRight"></div>
+          <div> introduce Company</div>
         </div>
       </div>
 
@@ -189,7 +195,7 @@ const CompanyOverviewContent = () => {
           data-id="checkItem1"
         >
           <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
-            <CheckIcon />
+            <CheckIcon className="hover:scale-125" />
           </div>
           <div>
             Nor again is there anyone who loves or pursues or desires to obtain
@@ -206,7 +212,7 @@ const CompanyOverviewContent = () => {
           data-id="checkItem2"
         >
           <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
-            <CheckIcon />
+            <CheckIcon className="hover:scale-125" />
           </div>
           <div>Nam libero tempore, cum soluta nobis est eligendi optio</div>
         </div>

@@ -1,22 +1,24 @@
 .companyLogoAnimation {
-  animation: companyLogoAnimation 3s infinite, companyLogoAnimation1 5s infinite;
+  animation: companyLogoAnimation 3s infinite;
 }
 
 @keyframes companyLogoAnimation {
   0% {
-    transform: scale(1);
-    transform: rotate(0);
+    transform: scale(0);
+    opacity: 0;
+    transform: rotate(0deg);
   }
 
   50% {
-    transform: scale(1.1);
-    transform: rotate(240deg);
+    transform: scale(1);
+    opacity: 1;
+    transform: rotate(180deg);
   }
 
   100% {
-    transform: scale(1.25);
+    transform: scale(0);
+    opacity: 0;
     transform: rotate(360deg);
-    opacity: 1;
   }
 }
 

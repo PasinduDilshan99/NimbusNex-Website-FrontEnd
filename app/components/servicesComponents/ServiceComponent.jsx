@@ -75,7 +75,7 @@ const ServiceComponent = ({ props }) => {
           ref={refs.icon}
           data-id="icon"
         >
-          <props.icon />
+          <props.icon className="hover:scale-150" />
         </div>
       </div>
       <div
