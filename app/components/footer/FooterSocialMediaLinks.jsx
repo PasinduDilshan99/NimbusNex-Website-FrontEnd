@@ -4,7 +4,7 @@ import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-const NavBarSocialMediaLinks = () => {
+const FooterSocialMediaLinks = () => {
   const socialMediaLinks = [
     {
       id: 1,
@@ -32,7 +32,7 @@ const NavBarSocialMediaLinks = () => {
     <div className="flex m-5">
       {socialMediaLinks.map((socialMediaLink) => (
         <a
-          className="flex flex-col justify-center p-2 m-1 my-2 bg-slate-300 hover:bg-[#ffb237] transition-colors duration-1000 ease-in-out"
+          className="flex flex-col justify-center p-2 m-1 my-2 bg-white hover:bg-[#ffb237] transition-colors duration-300 ease-in-out rounded-full text-black hover:text-white"
           key={socialMediaLink.id}
           href={socialMediaLink.link}
           target="_blank"
@@ -45,4 +45,4 @@ const NavBarSocialMediaLinks = () => {
   );
 };
 
-export default NavBarSocialMediaLinks;
+export default FooterSocialMediaLinks;
