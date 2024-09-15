@@ -11,18 +11,17 @@
 }
 
 .textComeFromLeftToRight {
-    animation: slideInFromLeft 0.5s ease-out forwards;
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
-  
+}
 
 .textComeFromRightToLeft {
   animation: slideInFromRight 0.5s ease-out forwards;
@@ -38,29 +37,80 @@
 }
 
 .textComeFromTopToBottom {
-    animation: slideInFromTop 0.5s ease-out forwards;
-  }
-  
-  @keyframes slideInFromTop {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+  animation: slideInFromTop 0.5s ease-out forwards;
+}
 
-  .textComeFromBottomToTop {
-    animation: slideInFromBottom 0.5s ease-out forwards;
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
   }
-  
-  @keyframes slideInFromBottom {
-    0% {
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
   }
+}
 
-  
+.textComeFromBottomToTop {
+  animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.textComeFromTopRight {
+  animation: slideInFromTopRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromTopRight {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromRightBottom {
+  animation: slideInFromRightBottom 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromRightBottom {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromBottomLeft {
+  animation: slideInFromBottomleft 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromBottomleft {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromLeftTop {
+  animation: slideInFromLeftTop 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromLeftTop {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+

@@ -1,0 +1,23 @@
+.image-black-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-black-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #ffb237, transparent);
+  opacity: 0;
+  transition: all 1s;
+  transform: translateZ(0); /* Initial state */
+  z-index: 1;
+}
+
+.image-black-gradient:hover::after {
+  opacity: 0.4;
+  transform: translateZ(10px); /* Apply Z-axis transformation on hover */
+}

@@ -3,7 +3,7 @@ import React from "react";
 const CompanyOverviewService = ({ props }) => {
   return (
     <div className="flex items-center p-2">
-      <div className="p-4 m-2 rounded-full bg-[#ffb237]">
+      <div className="p-4 m-2 rounded-full bg-[#ffb237] hover:bg-black hover:text-white transition-colors duration-500">
         <props.icon />
       </div>
       <div className="flex flex-col ">

@@ -188,7 +188,7 @@ const CompanyOverviewContent = () => {
           ref={refs.checkItem1}
           data-id="checkItem1"
         >
-          <div className="bg-[#ffb237] rounded-full p-1 mx-2">
+          <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
             <CheckIcon />
           </div>
           <div>
@@ -205,17 +205,16 @@ const CompanyOverviewContent = () => {
           ref={refs.checkItem2}
           data-id="checkItem2"
         >
-          <div className="bg-[#ffb237] rounded-full p-1 mx-2">
+          <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
             <CheckIcon />
           </div>
-          <div
-          >Nam libero tempore, cum soluta nobis est eligendi optio</div>
+          <div>Nam libero tempore, cum soluta nobis est eligendi optio</div>
         </div>
       </div>
 
       {/* Footer */}
       <div
-        className={`bg-[#ffb237] p-4 flex mt-2 ${
+        className={`bg-[#ffb237] p-4 flex items-center mt-2 ${
           isInView.footer ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
         ref={refs.footer}
@@ -230,7 +229,11 @@ const CompanyOverviewContent = () => {
             className="mx-3"
           />
         </div>
-        <div className={`text-xl`} ref={refs.footer} data-id="footer">
+        <div
+          className={`md:text-xl text-lg font-semibold  px-4`}
+          ref={refs.footer}
+          data-id="footer"
+        >
           FOR YOUR IT BUSINESS, WE MADE THINGS EASIER
         </div>
       </div>
