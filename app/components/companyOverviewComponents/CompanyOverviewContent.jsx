@@ -125,13 +125,13 @@ const CompanyOverviewContent = () => {
           <div className="flex flex-col mr-4">
             {/* Service 1 */}
             <div
-              className={`${
-                isInView.service1
-                  ? "showItem textComeFromRightToLeft"
-                  : "hideItem"
-              }`}
-              ref={refs.service1}
-              data-id="service1"
+              // className={`${
+              //   isInView.service1
+              //     ? "showItem textComeFromRightToLeft"
+              //     : "hideItem"
+              // }`}
+              // ref={refs.service1}
+              // data-id="service1"
             >
               <CompanyOverviewService
                 props={{
@@ -144,13 +144,13 @@ const CompanyOverviewContent = () => {
             <hr />
             {/* Service 2 */}
             <div
-              className={`${
-                isInView.service2
-                  ? "showItem textComeFromRightToLeft"
-                  : "hideItem"
-              }`}
-              ref={refs.service2}
-              data-id="service2"
+              // className={`${
+              //   isInView.service2
+              //     ? "showItem textComeFromRightToLeft"
+              //     : "hideItem"
+              // }`}
+              // ref={refs.service2}
+              // data-id="service2"
             >
               <CompanyOverviewService
                 props={{
