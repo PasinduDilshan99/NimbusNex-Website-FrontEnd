@@ -75,10 +75,10 @@ const OurWorkProcess = () => {
   return (
     <div>
       <div className="lg:mt-0 md:mt-10 mt-20">
-        <div className="flex flex-col items-center p-20">
-          <div className="p-4 uppercase flex justify-center items-center ">
+        <div className="flex flex-col md:items-center p-4 py-20">
+          <div className="uppercase p-4 flex md:justify-center items-center ">
             <div
-              className={`px-4 text-[#ffb237] pentagonAnimation ${
+              className={` text-[#ffb237] pentagonAnimation ${
                 isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
               }`}
               ref={refs.icon}
@@ -87,7 +87,7 @@ const OurWorkProcess = () => {
               <PentagonIcon />
             </div>
             <div
-              className={`font-bold md:text-lg ${
+              className={`font-bold md:text-lg px-4 ${
                 isView.icon ? "showItem textComeFromRightToLeft" : "hideItem"
               }`}
               ref={refs.icon}
@@ -98,7 +98,7 @@ const OurWorkProcess = () => {
             </div>
           </div>
           <div
-            className={`font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-center p-4 ${
+            className={`font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl md:text-center p-4 ${
               isView.icon ? "showItem textComeFromBottomToTop" : "hideItem"
             }`}
             ref={refs.icon}

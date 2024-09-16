@@ -45,7 +45,7 @@ const CompanyOverviewService = ({ props }) => {
   }, []);
 
   return (
-    <div className="flex md:flex-row flex-col items-center justify-center md:text-left text-center p-2 ">
+    <div className="flex md:flex-row  flex-col items-center justify-center md:text-left text-center p-2 ">
       <div
         className={`p-4 m-2 rounded-full bg-[#ffb237] hover:bg-black hover:text-white transition-colors duration-500 ${
           isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"

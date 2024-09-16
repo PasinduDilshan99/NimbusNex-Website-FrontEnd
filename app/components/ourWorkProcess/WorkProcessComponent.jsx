@@ -51,7 +51,7 @@ const WorkProcessComponent = ({ props }) => {
   }, []);
   return (
     <div
-      className={`h-[300px] mb-10 relative bg-gray-100 mt-12 flex flex-col  justify-center hover:shadow-xl hover:shadow-[#fdbd55] hover:font-bold transition-transform duration-300 bg-gradient-to-t from-black to-transparent hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent ${
+      className={`h-[300px] md:mb-10 relative bg-gray-100 mt-12 flex flex-col mx-10  justify-center hover:shadow-xl hover:shadow-[#fdbd55] hover:font-bold transition-transform duration-300 bg-gradient-to-t from-black to-transparent hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent ${
         isView.upperBox ? "showItem popUpText" : "hideItem"
       }`}
       ref={refs.upperBox}

@@ -70,11 +70,11 @@ const RecentProjectArea = () => {
   ];
 
   return (
-    <div>
-      <div className="bg-[#28241f] flex flex-col items-center p-20 pb-32">
-        <div className="p-4 uppercase flex justify-center items-center ">
+    <div className="mt-5">
+      <div className="bg-[#28241f] flex flex-col md:items-center p-4 pb-32">
+        <div className="p-4 uppercase flex md:justify-center md:items-center  ">
           <div
-            className={`px-4 text-[#ffb237] pentagonAnimation ${
+            className={` text-[#ffb237] pentagonAnimation ${
               isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
             }`}
             ref={refs.icon}
@@ -83,7 +83,7 @@ const RecentProjectArea = () => {
             <PentagonIcon />
           </div>
           <div
-            className={`text-white font-bold text-lg ${
+            className={`text-white font-bold px-4 md:text-lg ${
               isView.iconText ? "showItem textComeFromRightToLeft" : "hideItem"
             }`}
             ref={refs.iconText}
@@ -94,7 +94,7 @@ const RecentProjectArea = () => {
           </div>
         </div>
         <div
-          className={`text-white font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-center p-4 ${
+          className={`text-white font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl  md:text-center p-4 ${
             isView.iconText ? "showItem textComeFromBottomToTop" : "hideItem"
           }`}
           ref={refs.iconText}
@@ -109,6 +109,7 @@ const RecentProjectArea = () => {
             <div
               key={projectsArea.id}
               style={{ width: "400px", height: "390px" }}
+              className=""
             >
               <RecentProjectComponent props={projectsArea} />
             </div>

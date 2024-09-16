@@ -87,12 +87,12 @@ const ITSupportContent = () => {
           ref={refs.iconText}
           data-id="iconText"
         >
-             <div className="titleAnimationLeftToRight"></div>
-         <div> Quality IT Support</div>
+          <div className="titleAnimationLeftToRight"></div>
+          <div> Quality IT Support</div>
         </div>
       </div>
       <div
-        className={`capitalize text-5xl font-bold mt-3 ${
+        className={`capitalize xl:text-5xl lg:text-4xl  text-3xl  font-bold mt-3 ${
           isView.header ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
         ref={refs.header}
@@ -103,7 +103,7 @@ const ITSupportContent = () => {
         with Technology
       </div>
       <div
-        className={`text-lg mt-3 ${
+        className={`md:text-lg  mt-3 ${
           isView.text ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
         ref={refs.text}
@@ -112,11 +112,11 @@ const ITSupportContent = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, Heres what to
         know about how to start a consulting business
       </div>
-      <div className="p-4 flex mt-3">
+      <div className="p-4 flex mt-1">
         <div className="flex items-center">
           <div className="flex flex-col  mr-4">
             <div
-              className={`max-w-[80%] ${
+              className={`max-w-[80%] self-center ${
                 isView.feature1
                   ? "showItem textComeFromLeftToRight"
                   : "hideItem"
@@ -132,24 +132,22 @@ const ITSupportContent = () => {
                 }}
               />
             </div>
-            <div>
-              <div
-                className={`max-w-[80%] ${
-                  isView.feature2
-                    ? "showItem textComeFromLeftToRight"
-                    : "hideItem"
-                }`}
-                ref={refs.feature2}
-                data-id="feature2"
-              >
-                <CompanyOverviewService
-                  props={{
-                    icon: services[1].icon,
-                    title: services[1].title,
-                    text: services[1].text,
-                  }}
-                />
-              </div>
+            <div
+              className={`max-w-[80%] self-center ${
+                isView.feature2
+                  ? "showItem textComeFromLeftToRight"
+                  : "hideItem"
+              }`}
+              ref={refs.feature2}
+              data-id="feature2"
+            >
+              <CompanyOverviewService
+                props={{
+                  icon: services[1].icon,
+                  title: services[1].title,
+                  text: services[1].text,
+                }}
+              />
             </div>
           </div>
         </div>

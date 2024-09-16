@@ -54,7 +54,7 @@ const ITServiceCustomize = () => {
       data-id="box"
     >
       <div
-        className={`font-extrabold lg:text-3xl text-2xl text-center lg:text-left md:mx-10 ${
+        className={`font-bold lg:text-3xl text-2xl text-center lg:text-left md:mx-10 ${
           isView.title ? "showItem textComeFromLeftToRight" : "hideItem"
         }`}
         ref={refs.title}
@@ -69,7 +69,7 @@ const ITServiceCustomize = () => {
         ref={refs.text}
         data-id="text"
       >
-        <YellowBottomTopBlack props={{ text: "View all portfolio" }} />
+        <YellowBottomTopBlack props={{ text: "View All Portfolio" }} />
       </div>
     </div>
   );
