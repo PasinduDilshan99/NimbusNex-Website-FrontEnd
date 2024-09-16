@@ -1,7 +1,46 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import FooterPopularPostComponent from "./FooterPopularPostComponent";
 
 const FooterPopularPost = () => {
+  const [isView, setIsView] = useState({
+    title: false,
+  });
+
+  const refs = {
+    title: useRef(null),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsView((prevState) => ({
+              ...prevState,
+              [entry.target.dataset.id]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.keys(refs).forEach((key) => {
+      if (refs[key].current) {
+        observer.observe(refs[key].current);
+      }
+    });
+
+    return () => {
+      Object.keys(refs).forEach((key) => {
+        if (refs[key].current) {
+          observer.unobserve(refs[key].current);
+        }
+      });
+    };
+  }, []);
+
   const popularPosts = [
     {
       id: 1,
@@ -19,7 +58,15 @@ const FooterPopularPost = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="text-2xl font-semibold pb-6">Popular post</div>
+      <div
+        className={`text-2xl font-semibold pb-6 ${
+          isView.title ? "showItem textComeFromTopToBottom" : "hideItem"
+        }`}
+        ref={refs.title}
+        data-id="title"
+      >
+        Popular post
+      </div>
       <div>
         {popularPosts.map((popularPost) => (
           <div key={popularPost.id} className="flex flex-col p-3">

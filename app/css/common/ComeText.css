@@ -164,3 +164,16 @@
     opacity: 1;
   }
 }
+
+.lineCreateRightToLeft {
+  animation: lineCreateRightToLeft 10s ease-out forwards;
+}
+
+@keyframes lineCreateRightToLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
