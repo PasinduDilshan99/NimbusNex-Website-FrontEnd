@@ -165,7 +165,7 @@ const CompanyOverviewContent = () => {
           {/* Project */}
           <div>
             <div
-              className={`bg-[#ffb237] p-8 flex justify-center flex-col items-center ${
+              className={`bg-[#ffb237] md:p-8 p-2  flex justify-center flex-col items-center rounded-xl text-center ${
                 isInView.project
                   ? "showItem textComeFromRightToLeft"
                   : "hideItem"
@@ -173,7 +173,7 @@ const CompanyOverviewContent = () => {
               ref={refs.project}
               data-id="project"
             >
-              <div className="h-16 w-16 rounded-full border-r-white border-8 flex items-center justify-center">
+              <div className="md:h-16 md:w-16 h-12 w-12 text-xs text-center rounded-full border-r-white border-8 flex items-center justify-center">
                 <div className="">90%</div>
               </div>
               <div>IT Project Solution</div>

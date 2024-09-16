@@ -51,7 +51,7 @@ const WorkProcessComponent = ({ props }) => {
   }, []);
   return (
     <div
-      className={`h-[300px] mb-10 relative bg-gray-300 mt-12 flex flex-col justify-center ${
+      className={`h-[300px] mb-10 relative bg-gray-100 mt-12 flex flex-col  justify-center hover:shadow-xl hover:shadow-[#fdbd55] hover:font-bold transition-transform duration-300 bg-gradient-to-t from-black to-transparent hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent ${
         isView.upperBox ? "showItem popUpText" : "hideItem"
       }`}
       ref={refs.upperBox}
@@ -59,19 +59,19 @@ const WorkProcessComponent = ({ props }) => {
     >
       <div className="flex justify-center">
         <div
-          className={`absolute top-[-30px] bg-[#fdbd55] rounded-full z-20 flex justify-center items-center p-4  border-black border-2 ${
+          className={`absolute top-[-30px] bg-[#fdbd55] rounded-full z-20 flex justify-center items-center p-4 hover:p-5 border-black border-2 hover:bg-black hover:border-white hover:text-white transition-all duration-300 ${
             isView.icon ? "showItem textComeFromTopToBottom" : "hideItem"
           }`}
           ref={refs.icon}
           data-id="icon"
         >
-          <props.icon />
+          <props.icon className="hover:scale-150" />
         </div>
       </div>
 
       <div className="flex flex-col justify-center items-center px-4 text-center">
         <div
-          className={`font-semibold text-2xl ${
+          className={`font-semibold text-2xl  ${
             isView.title ? "showItem textComeFromRightToLeft" : "hideItem"
           }`}
           ref={refs.title}
@@ -91,13 +91,13 @@ const WorkProcessComponent = ({ props }) => {
       </div>
 
       <div
-        className={`absolute bottom-0 bg-[#0c0c0a] z-10 flex justify-center items-center w-full ${
+        className={`absolute bottom-0 bg-[#0c0c0a] z-10 flex text-[#fdbd55] hover:text-black hover:bg-[#fdbd55] justify-center items-center w-full ${
           isView.lowerBox ? "showItem popUpText" : "hideItem"
         }`}
         ref={refs.lowerBox}
         data-id="lowerBox"
       >
-        <div className="text-center text-[#fdbd55]">
+        <div className="text-center ">
           <div
             className={`m-2 mt-5 font-semibold text-2xl ${
               isView.num ? "showItem textComeFromBottomToTop" : "hideItem"

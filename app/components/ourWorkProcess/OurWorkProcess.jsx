@@ -74,7 +74,7 @@ const OurWorkProcess = () => {
   ];
   return (
     <div>
-      <div>
+      <div className="lg:mt-0 md:mt-10 mt-20">
         <div className="flex flex-col items-center p-20">
           <div className="p-4 uppercase flex justify-center items-center ">
             <div
@@ -109,8 +109,8 @@ const OurWorkProcess = () => {
           <div className="flex flex-col lg:flex-row lg:justify-center gap-5 items-center">
             {workProcessList.map((workProcessData, index) => (
               <div key={workProcessData.id} className="">
-                <div className="flex justify-between items-center p-2">
-                  <WorkProcessComponent props={workProcessData} />
+                <div className="flex justify-between items-center p-2 ">
+                  <WorkProcessComponent props={workProcessData} className="abc" />
                   {index !== workProcessList.length - 1 && (
                     <Image
                       className={`pl-4 hidden lg:block ${
