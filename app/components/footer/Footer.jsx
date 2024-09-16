@@ -56,17 +56,25 @@ const Footer = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className={`text-white ${isView.box ? "showItem popUpText" : "hideItem"}`}
+      className={`text-white ${isView.box ? "showItem popUpText" : "hideItem"} lg:mt-0 md:mt-16 mt-20`}
       ref={refs.box}
       data-id="box"
     >
-      <div className="p-16">
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col lg:flex-row lg:justify-evenly lg:items-center">
-            <FooterCompanyDetails />
-            <FooterPopularPost />
-            <FooterLinksComponent />
-            <FooterNewsletter />
+      <div className="p-4 py-16">
+        <div className="flex flex-col items-center ">
+          <div className="flex flex-col lg:flex-row lg:justify-evenly  gap-6 lg:pt-10">
+            <div className="self-center">
+              <FooterCompanyDetails />
+            </div>
+            <div>
+              <FooterPopularPost />
+            </div>
+            <div>
+              <FooterLinksComponent />
+            </div>
+            <div>
+              <FooterNewsletter />
+            </div>
           </div>
           <hr className="w-full border-gray-300 border-t-2 my-2" />
           <div className="flex justify-between items-center pt-5">

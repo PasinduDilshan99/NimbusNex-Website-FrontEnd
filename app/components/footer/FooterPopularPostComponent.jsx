@@ -84,7 +84,7 @@ const FooterPopularPostComponent = ({ props }) => {
             </div>
           </div>
           <div
-            className={`p-2 text-xl font-semibold ${
+            className={`p-2 pr-0 text-xl font-semibold ${
               isView.text ? "showItem textComeFromBottomToTop" : "hideItem"
             }`}
             ref={refs.text}

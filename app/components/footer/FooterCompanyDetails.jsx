@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import WhiteLogo from "../logo/WhiteLogo";
 
@@ -73,9 +72,9 @@ const FooterCompanyDetails = () => {
 
   return (
     <div className="flex flex-col ">
-      <div className="text-3xl flex items-center">
+      <div className="text-3xl flex items-center ">
         <div
-          className={`pr-2 border-2 border-white rounded-full companyLogoAnimation xl:w-16 xl:h-16  w-10 h-10  ${
+          className={`border-2 border-white rounded-full companyLogoAnimation xl:w-12 xl:h-12 m-2 w-10 h-10  ${
             isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
           } `}
           style={{

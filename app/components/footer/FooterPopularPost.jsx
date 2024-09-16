@@ -69,7 +69,7 @@ const FooterPopularPost = () => {
       </div>
       <div>
         {popularPosts.map((popularPost) => (
-          <div key={popularPost.id} className="flex flex-col p-3">
+          <div key={popularPost.id} className="flex flex-col p-3 pr-0">
             <FooterPopularPostComponent props={popularPost} />
           </div>
         ))}

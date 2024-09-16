@@ -60,7 +60,7 @@ export default function Home() {
         {/* <div className="">
           <Map />
         </div> */}
-        <div className="absolute w-full z-50 -bottom-10">
+        <div className="absolute w-full z-10 md:-bottom-28 lg:-bottom-10 -bottom-32">
           <div className="flex justify-center w-full ">
             <LocationDetails />
           </div>

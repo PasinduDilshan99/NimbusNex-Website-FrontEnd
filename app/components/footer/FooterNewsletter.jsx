@@ -55,9 +55,9 @@ const FooterNewsletter = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       <div
-        className={`text-2xl font-semibold pb-6 ${
+        className={`text-2xl font-semibold pb-2 ${
           isView.title ? "showItem textComeFromTopToBottom" : "hideItem"
         }`}
         ref={refs.title}
@@ -66,7 +66,7 @@ const FooterNewsletter = () => {
         Newsletter
       </div>
       <div
-        className={`text-xl font-semibold ${
+        className={`text-lg font-semibold ${
           isView.text ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
         ref={refs.text}
@@ -75,14 +75,14 @@ const FooterNewsletter = () => {
         Get the latest news other tips
       </div>
       <div
-        className={`py-4 px-7 bg-white text-gray-500 items-center text-xl font-semibold rounded-sm text-center flex ${
+        className={` py-2 pl-3 bg-white text-gray-500 items-center text-lg font-semibold rounded-sm  text-center flex ${
           isView.box ? "showItem popUpText" : "hideItem"
         }`}
         ref={refs.box}
         data-id="box"
       >
         <div
-          className={`pr-2 ${
+          className={`pr-2  ${
             isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
           }`}
           ref={refs.icon}
@@ -106,14 +106,16 @@ const FooterNewsletter = () => {
       </div>
 
       <div
-        className={` ${isView.btn ? "showItem slowPopUpText" : "hideItem"}`}
+        className={` self-center ${
+          isView.btn ? "showItem slowPopUpText" : "hideItem"
+        }`}
         ref={refs.btn}
         data-id="btn"
       >
         <WhiteTopToBottom props={{ text: "subscribe" }} />
       </div>
       <div
-        className={`text-gray-400 text-lg ${
+        className={`text-gray-400 text-lg text-center ${
           isView.footerText ? "showItem textComeFromBottomToTop" : "hideItem"
         }`}
         ref={refs.footerText}

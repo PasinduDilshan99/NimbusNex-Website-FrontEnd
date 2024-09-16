@@ -51,7 +51,7 @@ const FooterLinksComponent = () => {
     { id: 6, text: "Pricing & Plans" },
   ];
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col  px-4">
       <div
         className={`text-2xl font-semibold pb-6  ${
           isView.title ? "showItem textComeFromTopToBottom" : "hideItem"
@@ -65,7 +65,7 @@ const FooterLinksComponent = () => {
         {links.map((link) => (
           <div
             key={link.id}
-            className={`text-gray-400 text-lg pb-2 ${
+            className={`text-gray-400 text-lg pb-2 hover:text-[#ffb237] hover:font-bold  ${
               isView.text
                 ? `${
                     link.id % 2 === 0
