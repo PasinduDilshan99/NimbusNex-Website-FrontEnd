@@ -1,8 +1,50 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import RecentProjectComponent from "./RecentProjectComponent";
 import PentagonIcon from "@mui/icons-material/Pentagon";
 
 const RecentProjectArea = () => {
+  const [isView, setIsView] = useState({
+    icon: false,
+    iconText: false,
+    header: false,
+  });
+
+  const refs = {
+    icon: useRef(null),
+    iconText: useRef(null),
+    header: useRef(null),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsView((prevState) => ({
+              ...prevState,
+              [entry.target.dataset.id]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.keys(refs).forEach((key) => {
+      if (refs[key].current) {
+        observer.observe(refs[key].current);
+      }
+    });
+
+    return () => {
+      Object.keys(refs).forEach((key) => {
+        if (refs[key].current) {
+          observer.unobserve(refs[key].current);
+        }
+      });
+    };
+  }, []);
   const projectsAreas = [
     {
       id: 1,
@@ -29,14 +71,35 @@ const RecentProjectArea = () => {
 
   return (
     <div>
-      <div className="bg-[#45260e] flex flex-col items-center p-20 pb-32">
+      <div className="bg-[#28241f] flex flex-col items-center p-20 pb-32">
         <div className="p-4 uppercase flex justify-center items-center ">
-          <div className="px-4">
-            <PentagonIcon className="text-[#ffb237]" />
+          <div
+            className={`px-4 text-[#ffb237] pentagonAnimation ${
+              isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
+            }`}
+            ref={refs.icon}
+            data-id="icon"
+          >
+            <PentagonIcon />
           </div>
-          <div className="text-white font-bold text-lg">Our Completed Projects</div>
+          <div
+            className={`text-white font-bold text-lg ${
+              isView.iconText ? "showItem textComeFromRightToLeft" : "hideItem"
+            }`}
+            ref={refs.iconText}
+            data-id="iconText"
+          >
+            <div className="titleAnimationLeftToRight"></div>
+            <div>Our Completed Projects</div>
+          </div>
         </div>
-        <div className="text-white font-extrabold text-6xl text-center p-4 ">
+        <div
+          className={`text-white font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-center p-4 ${
+            isView.iconText ? "showItem textComeFromBottomToTop" : "hideItem"
+          }`}
+          ref={refs.iconText}
+          data-id="iconText"
+        >
           Technology Solutions Recent
           <br />
           Our Tech Projects

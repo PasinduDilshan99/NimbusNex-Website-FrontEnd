@@ -1,0 +1,15 @@
+.circleBubble {
+    animation: circleBubble 1s infinite alternate;
+  }
+  
+  @keyframes circleBubble {
+    from {
+      width: 0px;
+      height: 0px;
+    }
+    to {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  

@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div
       className="transition-opacity duration-400 ease-in-out"
-      style={{ visibility: 'visible' }} // Tailwind CSS doesn't handle visibility directly
+      style={{ visibility: 'visible' }} 
     >
       <svg
         viewBox="0 0 10 50"

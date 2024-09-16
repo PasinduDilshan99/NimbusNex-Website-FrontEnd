@@ -1,0 +1,49 @@
+.circleRotation {
+  animation: circleRotation 3s infinite;
+  transform-origin: center;
+}
+
+@keyframes circleRotation {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0);
+    color: #ffb237;
+  }
+  25% {
+    transform: rotate(180deg);
+    color: black;
+  }
+  75% {
+    transform: rotate(-180deg);
+    color: black;
+  }
+}
+
+.colorChangeBlackToYellow {
+  animation: colorChangeBlackToYellow 3s infinite alternate;
+}
+
+@keyframes colorChangeBlackToYellow {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: #ffb237;
+  }
+}
+
+
+.fullyCircle{
+    animation: fullyCircle 10s infinite  forwards;
+}
+
+@keyframes fullyCircle{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -85,7 +85,7 @@ const NavBar = () => {
                   alt="logo"
                 />
               </div>
-              <div className="justify-center content-center text-xl hover:font-semibold duration-100">
+              <div className="justify-center content-center lg:text-xl text-lg hover:font-semibold duration-100">
                 <Logo />
               </div>
             </div>
