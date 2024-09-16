@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import FooterPopularPost from "./FooterPopularPost";
 import FooterCompanyDetails from "./FooterCompanyDetails";
 import FooterLinksComponent from "./FooterLinksComponent";
@@ -6,6 +7,50 @@ import FooterNewsletter from "./FooterNewsletter";
 import FooterSocialMediaLinks from "./FooterSocialMediaLinks";
 
 const Footer = () => {
+  const [isView, setIsView] = useState({
+    icon: false,
+    iconText: false,
+    header: false,
+    box: false,
+  });
+
+  const refs = {
+    icon: useRef(null),
+    iconText: useRef(null),
+    header: useRef(null),
+    box: useRef(null),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsView((prevState) => ({
+              ...prevState,
+              [entry.target.dataset.id]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    Object.keys(refs).forEach((key) => {
+      if (refs[key].current) {
+        observer.observe(refs[key].current);
+      }
+    });
+
+    return () => {
+      Object.keys(refs).forEach((key) => {
+        if (refs[key].current) {
+          observer.unobserve(refs[key].current);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div
       style={{

@@ -56,16 +56,18 @@ const RecentProjectComponent = ({ props }) => {
   }, []);
   return (
     <div
-      className={`relative ${isView.image ? "showItem popUpText" : "hideItem"}`}
+      className={`relative overflow-hidden w-[400px] h-[390px] hover:w-[420px] hover:h-[410px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ffb237] ${
+        isView.image ? "showItem popUpText" : "hideItem"
+      }`}
       style={{
         backgroundImage: `url(${props.image})`,
-        width: "400px",
-        height: "390px",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
       ref={refs.image}
       data-id="image"
     >
-      <div className="flex justify-evenly bg-neutral-50/80 absolute bottom-10 w-full  p-2">
+      <div className="flex justify-evenly bg-neutral-50/80  hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent absolute bottom-10 w-full transition-colors duration-500 p-2">
         <div>
           <div className="text-[#ffb237] flex text-lg">
             <div
@@ -110,7 +112,7 @@ const RecentProjectComponent = ({ props }) => {
         </div>
         <div className=" flex items-center">
           <div
-            className={`bg-[#ffb237] rounded-full w-12 h-12 flex justify-center items-center border-black border-2 transition-all duration-300 hover:w-14 hover:h-14 ${
+            className={`bg-[#ffb237] cursor-pointer rounded-full w-12 h-12 flex justify-center items-center border-black border-2 transition-all duration-300 hover:w-14 hover:h-14 ${
               isView.btn ? "showItem textComeFromRightToLeft" : "hideItem"
             }`}
             ref={refs.btn}

@@ -44,7 +44,7 @@ export default function Home() {
         <div>
           <RecentProjectArea />
         </div>
-        <div className="absolute w-full z-10 -bottom-10">
+        <div className="absolute w-full z-10 md:-bottom-24 lg:-bottom-10 -bottom-28">
           <div className="flex justify-center w-full ">
             <ITServiceCustomize />
           </div>
