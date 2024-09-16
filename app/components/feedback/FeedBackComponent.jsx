@@ -4,7 +4,7 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 const FeedBackComponent = ({ props }) => {
   return (
-    <div className="flex p-4 bg-white rounded-lg shadow-md">
+    <div className="flex p-4 bg-white rounded-lg shadow-md min-h-[350px] md:min-h-[300px] xl:min-h-[250px]">
       <div className="w-1/3">
         <Image src={props.image} height={200} width={200} alt="text" className="rounded-lg" />
       </div>

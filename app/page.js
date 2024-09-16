@@ -36,9 +36,9 @@ export default function Home() {
       <div>
         <ITSupport />
       </div>
-      <div>
+      {/* <div>
         <FeedBack />
-      </div>
+      </div> */}
       <div className="relative">
         <div>
           <RecentProjectArea />
