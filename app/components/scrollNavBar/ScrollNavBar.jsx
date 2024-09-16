@@ -34,8 +34,8 @@ const ScrollNavBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 backdrop-blur-md p-4 z-50  text-white bg-black">
-      <div className="container px-4 mx-auto flex justify-between items-center lg:px-10  ">
+    <div className="fixed  top-0 left-0 right-0 backdrop-blur-md p-4 z-50  text-white bg-black">
+      <div className="container px-4 flex justify-between items-center lg:px-10  ">
         <div className="bg-[#ffb237] text-lg font-bold  rounded px-2 lg:px-6 py-3 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
           <div className="flex items-center max-h-6  md:max-h-10">
             <div className="hidden lg:flex">
