@@ -78,7 +78,7 @@ const CompanyOverviewContent = () => {
   }, []);
 
   return (
-    <div className={`min-h-full flex flex-col justify-start px-8`}>
+    <div className={`min-h-full flex flex-col justify-start md:px-8 px-4`}>
       {/* Header */}
       <div className="flex" ref={refs.header} data-id="header">
         <div
@@ -120,18 +120,18 @@ const CompanyOverviewContent = () => {
       </div>
 
       {/* Services */}
-      <div className="p-4 flex mt-3">
-        <div className="flex items-center">
-          <div className="flex flex-col mr-4">
+      <div className="py-4 px-1 flex mt-3 ">
+        <div className="flex items-center ">
+          <div className="flex flex-col mr-4 ">
             {/* Service 1 */}
             <div
-              className={`${
-                isInView.service1
-                  ? "showItem textComeFromRightToLeft"
-                  : "hideItem"
-              }`}
-              ref={refs.service1}
-              data-id="service1"
+            // className={`${
+            //   isInView.service1
+            //     ? "showItem textComeFromRightToLeft"
+            //     : "hideItem"
+            // }`}
+            // ref={refs.service1}
+            // data-id="service1"
             >
               <CompanyOverviewService
                 props={{
@@ -144,13 +144,13 @@ const CompanyOverviewContent = () => {
             <hr />
             {/* Service 2 */}
             <div
-              className={`${
-                isInView.service2
-                  ? "showItem textComeFromRightToLeft"
-                  : "hideItem"
-              }`}
-              ref={refs.service2}
-              data-id="service2"
+            // className={`${
+            //   isInView.service2
+            //     ? "showItem textComeFromRightToLeft"
+            //     : "hideItem"
+            // }`}
+            // ref={refs.service2}
+            // data-id="service2"
             >
               <CompanyOverviewService
                 props={{
@@ -220,13 +220,13 @@ const CompanyOverviewContent = () => {
 
       {/* Footer */}
       <div
-        className={`bg-[#ffb237] p-4 flex items-center mt-2 ${
+        className={`bg-[#ffb237] md:p-4  p-1 flex items-center mt-2 ${
           isInView.footer ? "showItem textComeFromRightToLeft" : "hideItem"
-        }`}
+        } `}
         ref={refs.footer}
         data-id="footer"
       >
-        <div>
+        <div className="">
           <Image
             src="/company-logo.png"
             width={30}
@@ -236,7 +236,7 @@ const CompanyOverviewContent = () => {
           />
         </div>
         <div
-          className={`md:text-xl text-lg font-semibold  px-4`}
+          className={`md:text-xl text-lg font-semibold md:pl-4 pl-6`}
           ref={refs.footer}
           data-id="footer"
         >

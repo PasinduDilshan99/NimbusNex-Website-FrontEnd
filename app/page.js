@@ -14,10 +14,11 @@ import Map from "./components/map/Map";
 import Footer from "./components/footer/Footer";
 import LocationDetails from "./components/locationDetails/LocationDetails";
 import OurTeam from "./components/ourTeam/Ourteam";
+import FeedBackCarosuel from "./components/feedback/FeedBackCarosuel";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative bg-[#fffbe3] text-black mt-36 md:mt-56">
+    <main className="relative bg-[#fffbe3] text-black mt-56 md:mt-56">
       {/* <div className="z-20 relative">
         <NavBar />
       </div> */}
@@ -37,7 +38,7 @@ export default function Home() {
         <ITSupport />
       </div>
       <div>
-        <FeedBack />
+        <FeedBackCarosuel />
       </div>
       <div className="relative">
         <div>

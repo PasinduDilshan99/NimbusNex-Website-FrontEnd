@@ -69,7 +69,7 @@ const ServiceComponent = ({ props }) => {
       </div>
       <div className="flex justify-center">
         <div
-          className={`absolute bottom-[75px] bg-white rounded-full z-20 flex justify-center items-center p-4 ${
+          className={`absolute bottom-[75px] bg-white rounded-full z-[11] flex justify-center items-center p-4 ${
             isView.icon ? "showItem textComeFromBottomToTop" : "hideItem"
           }  hover:bg-black hover:text-[#ffb237] transition-all duration-500 `}
           ref={refs.icon}
