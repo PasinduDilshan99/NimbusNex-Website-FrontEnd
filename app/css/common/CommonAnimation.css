@@ -35,6 +35,21 @@
 }
 
 
+.colorChangeWhiteToYellow {
+  animation: colorChangeWhiteToYellow 3s infinite alternate;
+}
+
+@keyframes colorChangeWhiteToYellow {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: #ffb237;
+  }
+}
+
+
 .fullyCircle{
     animation: fullyCircle 10s infinite  forwards;
 }

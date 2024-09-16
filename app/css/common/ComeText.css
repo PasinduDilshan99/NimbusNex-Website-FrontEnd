@@ -135,6 +135,29 @@
   }
 }
 
+
+.titleAnimationLeftToRightWhite {
+  width: 0;
+  height: 4px;
+  background-color: white;
+  animation: titleAnimationLeftToRightWhite 2s alternate infinite;
+}
+
+@keyframes titleAnimationLeftToRightWhite {
+  0% {
+    width: 0;
+    background-color: white;
+  }
+  50% {
+    background-color: #ffb237;
+  }
+  100% {
+    width: 100%;
+    background-color: white;
+  }
+}
+
+
 .popUpText {
   animation: popUpText1 0.2s ease-out forwards;
 }

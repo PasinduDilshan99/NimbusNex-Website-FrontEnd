@@ -87,7 +87,7 @@ const ITSupportContent = () => {
           ref={refs.iconText}
           data-id="iconText"
         >
-          <div className="titleAnimationLeftToRight"></div>
+          <div className="titleAnimationLeftToRightWhite"></div>
           <div> Quality IT Support</div>
         </div>
       </div>

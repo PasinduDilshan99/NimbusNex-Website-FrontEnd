@@ -89,7 +89,7 @@ const RecentProjectArea = () => {
             ref={refs.iconText}
             data-id="iconText"
           >
-            <div className="titleAnimationLeftToRight"></div>
+            <div className="titleAnimationLeftToRightWhite"></div>
             <div>Our Completed Projects</div>
           </div>
         </div>
