@@ -63,12 +63,6 @@
 @keyframes topSliderImageZoom {
   0% {
     transform: scale(1);
-    transform: translateY(-50%);
-  }
-
-  40% {
-    transform: scale(1);
-    transform: translateY(0);
   }
 
   100% {
@@ -76,7 +70,8 @@
   }
 }
 
-/* .topSliderImageEntry{
+
+.topSliderImageEntry{
   animation: topSliderImageEntry 1s ease-out;
 }
 
@@ -90,4 +85,19 @@
   }
 }
 
- */
+.topSliderImageEntryBottom{
+  animation: topSliderImageEntryBottom 1s ease-out;
+}
+
+@keyframes topSliderImageEntryBottom {
+  0% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+

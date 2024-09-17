@@ -56,7 +56,7 @@ const NewPostComponent = ({ props }) => {
 
   return (
     <div
-      className={`relative overflow-hidden h-[475px] w-[370px] transition-all duration-300 hover:h-[520px] hover:w-[400px] ${
+      className={`relative overflow-hidden md:h-[475px] md:w-[370px] md:hover:h-[520px] md:hover:w-[400px] h-[445px] w-[340px] hover:h-[490px] hover:w-[370px] transition-all duration-300  ${
         isView.image ? "showItem popUpText" : "hideItem"
       }`}
       ref={refs.image}

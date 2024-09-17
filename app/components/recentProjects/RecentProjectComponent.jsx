@@ -56,7 +56,7 @@ const RecentProjectComponent = ({ props }) => {
   }, []);
   return (
     <div
-      className={`relative overflow-hidden w-[400px] h-[390px] hover:w-[420px] hover:h-[410px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ffb237] ${
+      className={`relative overflow-hidden md:w-[400px] md:h-[390px] md:hover:w-[420px] md:hover:h-[410px] w-[350px] h-[340px] hover:w-[370px] hover:h-[360px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ffb237] ${
         isView.image ? "showItem popUpText" : "hideItem"
       }`}
       style={{

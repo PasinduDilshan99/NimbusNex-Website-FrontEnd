@@ -83,16 +83,16 @@ const NewPosts = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className={`pb-36 p-10 ${
+        className={`pb-36 p-4  ${
           isView.icon ? "showItem popUpText" : "hideItem"
         }`}
         ref={refs.icon}
         data-id="icon"
       >
-        <div className="flex flex-col items-center">
-          <div className="p-4 uppercase flex justify-center items-center ">
+        <div className="flex flex-col md:items-center items-start ">
+          <div className="p-4 uppercase  flex justify-center items-center ">
             <div
-              className={`px-4 ${
+              className={`${
                 isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
               }`}
               ref={refs.icon}
@@ -101,7 +101,7 @@ const NewPosts = () => {
               <PentagonIcon className="text-[#ffb237]" />
             </div>
             <div
-              className={`font-bold text-lg ${
+              className={`font-bold pl-4 text-lg ${
                 isView.iconText
                   ? "showItem textComeFromRightToLeft"
                   : "hideItem"
@@ -109,11 +109,12 @@ const NewPosts = () => {
               ref={refs.iconText}
               data-id="iconText"
             >
-              Our News Post
+              <div className="titleAnimationLeftToRight"></div>
+              <div>Our News Post</div>
             </div>
           </div>
           <div
-            className={`font-extrabold text-6xl text-center p-4 ${
+            className={`font-extrabold xl:text-6xl lg:text-5xl md:text-4xl text-3xl md:text-center px-4 ${
               isView.header ? "showItem textComeFromBottomToTop" : "hideItem"
             }`}
             ref={refs.header}
@@ -121,7 +122,7 @@ const NewPosts = () => {
           >
             Latest News & Articles
           </div>
-          <div className="flex flex-col lg:flex-row lg:justify-evenly md:items-center gap-8 justify-center items-center pt-10">
+          <div className="flex flex-col self-center lg:flex-row lg:justify-evenly md:items-center gap-8 justify-center items-center pt-10">
             {newPostsData.map((newPost) => (
               <div
                 key={newPost.id}
