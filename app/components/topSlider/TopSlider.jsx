@@ -99,11 +99,11 @@ const TopSlider = () => {
         />
         {/* <div className="flex justify-center items-center"> */}
         <div
-          className={`absolute right-[11%] bottom-[20%] x text-center ${
+          className={`absolute 2xl:right-[9.5%] xl:right-[6%]  lg:right-[3%] bottom-[20%] text-center ${
             animateText && "textComeFromRightBottomLine"
           }`}
         >
-          <h1 className={`hidden xl:flex rotate-[-51deg] text-center text-3xl`}>Ready to transform your business? IT Profestional Development</h1>
+          <h1 className={`hidden lg:flex rotate-[-51deg] text-center text-3xl`}>Ready to transform your business? IT Profestional Development</h1>
         </div>
 
         {/* </div> */}
