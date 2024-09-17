@@ -7,6 +7,7 @@ import NavBarMiddleComponent from "./NavBarMiddleComponent";
 import Image from "next/image";
 import NavBarBottomComponent from "./NavBarBottomComponent";
 import Logo from "../logo/Logo";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,8 +38,8 @@ const NavBar = () => {
     {
       id: 1,
       icon: EmailIcon,
-      text: "You may send an email",
-      value: "abc@gmail.com",
+      text: "Email Us",
+      value: "info@nimbusnex.com",
     },
     {
       id: 2,
@@ -49,12 +50,12 @@ const NavBar = () => {
   ];
 
   const links = [
-    { id: 1, text: "Services", link: "/" },
-    { id: 2, text: "About", link: "/about-us" },
-    { id: 3, text: "Projects", link: "/" },
-    { id: 4, text: "Page", link: "/" },
-    { id: 5, text: "Blog", link: "/" },
-    { id: 6, text: "Contact", link: "/contact-us" },
+    { id: 1, text: "Home", link: "/" },
+    { id: 2, text: "About Us", link: "/about-us" },
+    { id: 3, text: "Services", link: "/services" },
+    { id: 4, text: "Projects", link: "/projects" },
+    { id: 5, text: "Blog", link: "/blogs" },
+    { id: 6, text: "Contact Us", link: "/contact-us" },
   ];
 
   const handleClickOutside = (event) => {
@@ -74,22 +75,31 @@ const NavBar = () => {
     <div className="fixed top-0 left-0 right-0 backdrop-blur-md z-50 text-black lg:flex lg:justify-center bg-[#fffbe3] w-full textComeFromTop">
       <div className="flex justify-between px-4 items-center w-full">
         <div className="md:grid md:grid-rows-[auto] w-full">
-          <div className="flex justify-between md:mx-20 ">
+          <div className="flex  justify-between md:mx-20 ">
             {/* LOGO */}
-            <div className="flex bg-[#ffb237] m-6 md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105">
+            <div className="flex m-6 bg-[#ffb338] rounded-xl md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105">
               <div className="justify-center hidden md:flex content-center">
-                <Image
-                  src="/company-logo.png"
-                  width={30}
-                  height={30}
+                {/* <Image
+                  src="/newLogoBlack.png"
+                  width={35}
+                  height={35}
                   alt="logo"
-                  className="my-4"
-                />
+                  className="m-4 "
+                /> */}
               </div>
-              <div className="justify-center content-center lg:text-xl text-lg hover:font-semibold duration-100">
+              <Link
+                className="justify-center content-center lg:text-xl text-lg hover:font-semibold duration-100"
+                href="/"
+              >
                 {/* <Logo /> */}
-                
-              </div>
+                <Image
+                  src="/logoOB_word.png"
+                  width={150}
+                  height={150}
+                  alt="logo"
+                  className="my-4 w-[150px] md:w-[200px] lg:w-[300px]"
+                />
+              </Link>
             </div>
             {/* MIDDLE COMPONENT */}
             <div className="hidden xl:flex lg:justify-between">

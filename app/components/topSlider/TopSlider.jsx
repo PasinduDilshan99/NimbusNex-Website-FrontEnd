@@ -7,23 +7,24 @@ import "../../css/topSlider/topSlider.css";
 import WhiteBottomToTop from "../buttons/WhiteBottomToTop";
 import YellowTopToBottom from "../buttons/YellowTopToBottom";
 import YellowBottomToTop from "../buttons/YellowBottomToTop";
+import Link from "next/link";
 
 const TopSlider = () => {
   const changes = [
     {
       id: 1,
       image: "/slider-v3-img1.jpg",
-      text: "We Are Ready To Provide your it solutions",
+      text: "Make Your Project Idea Realistic",
     },
     {
       id: 2,
       image: "/slider-v2-img2.jpg",
-      text: "We Are Ready To Provide your it solutions",
+      text: "Open Up Your Business To The World",
     },
     {
       id: 3,
       image: "/slider-v2-img3.jpg",
-      text: "We Are Ready To Provide your it solutions",
+      text: "Let Us Make You Popular In The Digital World",
     },
   ];
 
@@ -103,7 +104,9 @@ const TopSlider = () => {
             animateText && "textComeFromRightBottomLine"
           }`}
         >
-          <h1 className={`hidden lg:flex rotate-[-51deg] text-center text-3xl`}>Ready to transform your business? IT Profestional Development</h1>
+          <h1 className={`hidden lg:flex rotate-[-51deg] text-center text-3xl`}>
+            Ready to transform your business? IT Profestional Development
+          </h1>
         </div>
 
         {/* </div> */}
@@ -124,10 +127,11 @@ const TopSlider = () => {
                 }`}
               >
                 <Image
-                  src="/company-logo.png"
-                  width={30}
-                  height={30}
+                  src="/newLogoYellow.png"
+                  width={35}
+                  height={35}
                   alt="logo"
+                  className="logoAnimation1"
                 />
               </div>
             </div>
@@ -143,12 +147,12 @@ const TopSlider = () => {
                 animateText ? "text-bottom-animate" : ""
               }`}
             >
-              <div className="p-4 mx-4 ">
+              <Link href="/services" className="p-4 mx-4 ">
                 <WhiteBottomToTop props={{ text: "  View Our Services" }} />
-              </div>
-              <div className="p-4 ">
+              </Link>
+              <Link href="/about-us" className="p-4 ">
                 <YellowBottomToTop props={{ text: "Learn More" }} />
-              </div>
+              </Link>
             </div>
           </div>
           <div className="hidden  md:flex mr-[10%] ml-24 bg-white p-3 hover:bg-[#ffb237] rounded-xl transition-colors duration-1000 ease-in-out">

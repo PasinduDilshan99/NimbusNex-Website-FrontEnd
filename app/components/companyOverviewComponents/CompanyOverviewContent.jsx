@@ -100,13 +100,13 @@ const CompanyOverviewContent = () => {
 
       {/* Intro */}
       <div
-        className={`capitalize text-4xl font-bold mt-3 ${
+        className={` text-4xl font-bold mt-3 ${
           isInView.intro ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
         ref={refs.intro}
         data-id="intro"
       >
-        Our Company <br /> specializes in IT Solutions
+        We are nimbusnex <br />
       </div>
       <div
         className={`text-lg mt-3 ${
@@ -115,11 +115,12 @@ const CompanyOverviewContent = () => {
         ref={refs.intro}
         data-id="intro"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, Heres what to
-        know about how to start a consulting business
+        We are ready to turn your ideas into reality with innovative and
+        tailored solutions, empowering business & individuals to overcome
+        challenges and move forward with confidence.
       </div>
 
-      {/* Services */}
+      Services
       <div className="py-4 px-1 flex mt-3 ">
         <div className="flex items-center ">
           <div className="flex flex-col mr-4 ">

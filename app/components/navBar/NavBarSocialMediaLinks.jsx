@@ -14,17 +14,17 @@ const NavBarSocialMediaLinks = () => {
     {
       id: 2,
       icon: XIcon,
-      link: "https://x.com/?lang=en",
+      link: "https://x.com/nimbusnex",
     },
     {
       id: 3,
       icon: FacebookIcon,
-      link: "https://www.facebook.com/",
+      link: "https://www.facebook.com/profile.php?id=61566068158327",
     },
     {
       id: 4,
       icon: InstagramIcon,
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/nimbusnex/",
     },
   ];
 

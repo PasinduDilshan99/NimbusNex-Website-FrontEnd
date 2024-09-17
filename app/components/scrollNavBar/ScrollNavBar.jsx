@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import Logo from "../logo/Logo";
 import WhiteLogo from "../logo/WhiteLogo";
+import Link from "next/link";
 
 const ScrollNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,30 +27,41 @@ const ScrollNavBar = () => {
   }, []);
 
   const links = [
-    { id: 1, text: "Services", link: "/" },
-    { id: 2, text: "About", link: "/about-us" },
-    { id: 3, text: "Projects", link: "/" },
-    { id: 4, text: "Page", link: "/" },
-    { id: 5, text: "Blog", link: "/" },
-    { id: 6, text: "Contact", link: "/contact-us" },
+    { id: 1, text: "Home", link: "/" },
+    { id: 2, text: "About Us", link: "/about-us" },
+    { id: 3, text: "Services", link: "/services" },
+    { id: 4, text: "Projects", link: "/projects" },
+    { id: 5, text: "Blog", link: "/blogs" },
+    { id: 6, text: "Contact Us", link: "/contact-us" },
   ];
 
   return (
-    <div className="fixed  top-0 left-0 right-0 backdrop-blur-md p-4 z-50  text-white bg-black">
+    <div className="fixed  top-0 left-0 right-0 backdrop-blur-md p-4 z-50 md:flex md:justify-center  text-white bg-black">
       <div className="container px-4 flex justify-between items-center lg:px-10  ">
-        <div className="md:bg-[#ffb237] text-lg font-bold  rounded px-2 lg:px-6 py-3 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+        <div className="md:bg-[#ffb237] bg-white  text-lg font-bold  rounded px-2 lg:px-6 py-3 hover:bg-[#ffb237] md:hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-300">
           <div className="flex items-center max-h-6  md:max-h-10">
-            <div className="hidden lg:flex">
+            <div className="justify-center hidden md:flex content-center">
+              {/* <Image
+                  src="/newLogoBlack.png"
+                  width={35}
+                  height={35}
+                  alt="logo"
+                  className="m-4 "
+                /> */}
+            </div>
+            <Link
+              className="justify-center content-center lg:text-xl text-lg hover:font-semibold duration-100"
+              href="/"
+            >
+              {/* <Logo /> */}
               <Image
-                src="/company-logo.png"
-                width={40}
-                height={40}
+                src="/logoOB_word.png"
+                width={150}
+                height={150}
                 alt="logo"
+                className="my-4 w-[150px] md:w-[120px] lg:w-[200px]"
               />
-            </div>
-            <div className="justify-center content-center hover:font-semibold duration-100">
-              <WhiteLogo />
-            </div>
+            </Link>
           </div>
         </div>
 

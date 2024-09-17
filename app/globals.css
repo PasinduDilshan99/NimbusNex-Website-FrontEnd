@@ -39,7 +39,7 @@
 .cursor-dot {
   width: 5px;
   height: 5px;
-  background-color: #ffb338;
+  background-color: rgb(255, 179, 56);
   animation: cursor-dot-animation 1s infinite alternate;
 }
 
@@ -408,3 +408,25 @@ figcaption::before{
   transition-duration: var(--def-transition-duration);
   transition-timing-function: ease-in-out;
 } */
+
+.logoAnimation1 {
+  animation: logoAnimation1 5s infinite ease;
+}
+
+@keyframes logoAnimation1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
