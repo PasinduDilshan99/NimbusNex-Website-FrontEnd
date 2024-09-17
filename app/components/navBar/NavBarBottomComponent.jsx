@@ -2,18 +2,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import WhiteTopToBottom from "../buttons/WhiteTopToBottom";
+import Link from "next/link";
 
 const NavBarBottomComponent = () => {
   const [searchBarStatus, setSearchBarStatus] = useState(false);
   const searchBarRef = useRef(null);
 
   const links = [
-    { id: 1, text: "Services", link: "/" },
-    { id: 2, text: "About", link: "/about-us" },
-    { id: 3, text: "Projects", link: "/" },
-    { id: 4, text: "Page", link: "/" },
-    { id: 5, text: "Blog", link: "/" },
-    { id: 6, text: "Contact", link: "/contact-us" },
+    { id: 1, text: "Home", link: "/" },
+    { id: 2, text: "About Us", link: "/about-us" },
+    { id: 3, text: "Services", link: "/services" },
+    { id: 4, text: "Projects", link: "/projects" },
+    { id: 5, text: "Blog", link: "/blogs" },
+    { id: 6, text: "Contact Us", link: "/contact-us" },
   ];
 
   const handleClickOutside = (event) => {
@@ -43,9 +44,9 @@ const NavBarBottomComponent = () => {
         ))}
       </div>
       <div className="flex px-3 items-center justify-center">
-        <div className="hidden lg:flex">
+        <Link href="/contact-us" className="hidden lg:flex">
           <WhiteTopToBottom props={{ text: "Contact Us" }} />
-        </div>
+        </Link>
 
         <div
           ref={searchBarRef}

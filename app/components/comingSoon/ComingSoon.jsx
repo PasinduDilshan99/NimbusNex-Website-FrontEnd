@@ -4,7 +4,7 @@ import Image from "next/image";
 import WhiteTopToBottom from "../buttons/WhiteTopToBottom";
 import Link from "next/link";
 
-const ComingSoon = () => {
+const ComingSoon = ({ props }) => {
   return (
     <div
       className="relative image-container bg-cover bg-center h-screen"
@@ -13,6 +13,19 @@ const ComingSoon = () => {
       }}
     >
       <div className="flex h-screen justify-center items-center flex-col w-screen lg:gap-10 md:gap-5 gap-2">
+        <div className="flex justify-center min-w-[100%] items-center text-9xl font-extrabold">
+          <svg width="100%" height="100%">
+            <text
+              x="50%"
+              y="50%"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              className="comingSoonText"
+            >
+              {props.text}
+            </text>
+          </svg>
+        </div>
         <div className="">
           <Image
             src={"/logoType-7.png"}

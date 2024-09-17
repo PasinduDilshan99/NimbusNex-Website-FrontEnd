@@ -9,22 +9,22 @@ const NavBarSocialMediaLinks = () => {
     {
       id: 1,
       icon: LinkedInIcon,
-      link: "https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F",
+      link: "https://www.linkedin.com/company/nimbusnex/",
     },
     {
       id: 2,
       icon: XIcon,
-      link: "https://x.com/?lang=en",
+      link: "https://x.com/nimbusnex",
     },
     {
       id: 3,
       icon: FacebookIcon,
-      link: "https://www.facebook.com/",
+      link: "https://www.facebook.com/profile.php?id=61566068158327",
     },
     {
       id: 4,
       icon: InstagramIcon,
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/nimbusnex/",
     },
   ];
 
