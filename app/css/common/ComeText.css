@@ -135,7 +135,6 @@
   }
 }
 
-
 .titleAnimationLeftToRightWhite {
   width: 0;
   height: 4px;
@@ -156,7 +155,6 @@
     background-color: white;
   }
 }
-
 
 .popUpText {
   animation: popUpText1 0.2s ease-out forwards;
@@ -198,5 +196,41 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+.textComeFromRightBottomLine {
+  animation: slideInFromRightBottom 2s;
+}
+
+@keyframes slideInFromRightBottom {
+  0% {
+    opacity: 0;
+    transform: translate(20%, 20%);
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(0, 0);
+  }
+}
+
+.textComeFromBottomLeftLine {
+  animation: slideInFromBottomleft 2s;
+}
+
+@keyframes slideInFromBottomleft {
+  0% {
+    opacity: 0;
+    transform: translate(-20%, 20%);
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(0, 0);
   }
 }
