@@ -8,10 +8,7 @@ import Footer from "../components/footer/Footer";
 const page = () => {
   const headerDetails = { title: "Contact Us", content: "Home / Contact Us" };
   return (
-    <div>
-      <div>
-        <NavBar />
-      </div>
+    <div className="md:mt-56 mt-20">
       <div>
         <TopImage props={headerDetails} />
       </div>

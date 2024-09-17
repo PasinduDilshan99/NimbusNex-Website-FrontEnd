@@ -16,10 +16,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NewNavBar />
-        <CustomCursor/>
-        <div className="relative bg-[#fffbe3] text-black mt-36 md:mt-56 ">
-          {children}
+        <div>
+          <div className="fixed z-50">
+            <NewNavBar />
+          </div>
+          <div>
+            <CustomCursor />
+          </div>
+          <div>
+            <div className="relative bg-[#fffbe3] text-black">
+              {children}
+            </div>
+          </div>
         </div>
       </body>
     </html>

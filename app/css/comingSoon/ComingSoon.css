@@ -1,0 +1,43 @@
+@keyframes comingSoonText {
+  0% {
+    fill: transparent;
+    stroke: #ffb338;
+    stroke-width: 3;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+  }
+
+  50% {
+    fill: #0000001f;
+    stroke: #ffb338;
+    stroke-width: 3;
+  }
+
+  80%,
+  100% {
+    fill: black;
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+  }
+}
+
+.comingSoonText {
+  animation: comingSoonText 7s infinite;
+  stroke: currentColor;
+  stroke-width: 3;
+  font-size: 120px;
+  @media (max-width: 640px) {
+    font-size: 48px;
+  }
+  @media ((min-width: 640px) and (max-width: 1024px)) {
+    font-size: 75px;
+  }
+  @media ((min-width: 1024) and (max-width: 1280px)) {
+    font-size: 96px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 120px;
+  }
+}

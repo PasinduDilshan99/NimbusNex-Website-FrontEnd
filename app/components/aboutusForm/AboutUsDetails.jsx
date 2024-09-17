@@ -4,8 +4,8 @@ import AboutUsForm from "./AboutUsForm";
 
 const AboutUsDetails = () => {
   return (
-    <div className="flex flex-col items-center my-16 min-w-[80%] mb-32">
-      <div className="text-center text-5xl font-bold py-4 w-full ">
+    <div className="flex flex-col items-center my-16 min-w-[80%] mb-32 mx-[10%]">
+      <div className="text-center lg:text-5xl md:text-4xl text-xl font-bold py-4 w-full ">
         Please dont hesitate to contact us
        with any inquiries or messages.
       </div>
