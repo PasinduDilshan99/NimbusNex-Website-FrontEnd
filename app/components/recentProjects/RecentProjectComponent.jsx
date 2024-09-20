@@ -56,7 +56,7 @@ const RecentProjectComponent = ({ props }) => {
   }, []);
   return (
     <div
-      className={`relative overflow-hidden md:w-[400px] md:h-[390px] md:hover:w-[420px] md:hover:h-[410px] w-[350px] h-[340px] hover:w-[370px] hover:h-[360px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ffb237] ${
+      className={`relative overflow-hidden background-black-shadow md:w-[400px] md:h-[390px] md:hover:w-[420px] md:hover:h-[410px] w-[350px] h-[340px] hover:w-[370px] hover:h-[360px] transition-all duration-300 hover:shadow-xl hover:shadow-[#ffb237] ${
         isView.image ? "showItem popUpText" : "hideItem"
       }`}
       style={{
@@ -67,7 +67,7 @@ const RecentProjectComponent = ({ props }) => {
       ref={refs.image}
       data-id="image"
     >
-      <div className="flex justify-evenly bg-neutral-50/80  hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent absolute bottom-10 w-full transition-colors duration-500 p-2">
+      <div className="flex z-10 justify-evenly bg-neutral-50/80  hover:bg-gradient-to-t hover:from-[#ffb237] hover:to-transparent absolute bottom-10 w-full transition-colors duration-500 p-2">
         <div>
           <div className="text-[#ffb237] flex text-lg">
             <div
