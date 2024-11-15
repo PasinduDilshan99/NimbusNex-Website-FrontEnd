@@ -64,26 +64,32 @@ const OurServices = () => {
     {
       id: 1,
       icon: BiotechIcon,
-      title: "Tech Analysis",
-      text: "There are many variations of passages of lorem Ipsum not simply random",
+      title: "Web Development",
+      text: "Create sleek, user-friendly websites tailored to your needs.",
     },
     {
       id: 2,
       icon: DataSaverOffIcon,
-      title: "IT Consultancy",
-      text: "There are many variations of passages of lorem Ipsum not simply random",
+      title: "Front-End Development",
+      text: "Build engaging, responsive interfaces that captivate users.",
     },
     {
       id: 3,
       icon: NetworkWifiIcon,
-      title: "Data Structuring",
-      text: "There are many variations of passages of lorem Ipsum not simply random",
+      title: "Back-End API Development",
+      text: "Ensure robust, secure systems with seamless integrations.",
     },
     {
       id: 4,
       icon: WifiTetheringIcon,
-      title: "Market Analysis",
-      text: "There are many variations of passages of lorem Ipsum not simply random",
+      title: "Data Science",
+      text: "Unlock insights and drive decisions with advanced data solutions.",
+    },
+    {
+      id: 5,
+      icon: WifiTetheringIcon,
+      title: "Our Other Services",
+      text: "Beyond IT, Nimbusnex delivers high-quality 3D Printing and Laser Engraving services to bring your ideas to life with precision and creativity",
     },
   ];
 
@@ -129,13 +135,12 @@ const OurServices = () => {
             ref={refs.text}
             data-id="text"
           >
-            Nemo enim ipsam voluptatem quia voluptas sit asper natur aut odit
-            aut fugit, sed quia consequuntur magni dolor qui ratione business
+            Transform your digital vision with our comprehensive IT solutions:
           </div>
         </div>
       </div>
       <div
-        className={`flex flex-col lg:flex-row md:justify-center md:items-center md:mx-8 mx-[10%] `}
+        className={`grid grid-cols-5 content-center items-center md:mx-8 mx-[10%] `}
       >
         {servicesData.map((serviceData) => (
           <div key={serviceData.id} className="m-2">
@@ -151,7 +156,7 @@ const OurServices = () => {
           ref={refs.subHead}
           data-id="subHead"
         >
-          Were Ready Grow your IT Solution !
+         {" We're Ready to Grow your IT Solution !"}
         </div>
         <div
           className={`mx-[5%] ${

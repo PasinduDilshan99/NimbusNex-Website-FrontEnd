@@ -94,19 +94,6 @@ const CompanyOverviewImages = () => {
           ref={refs.changeImage}
           data-id="changeImage"
         />
-
-        <div
-          className={`absolute md:-top-10 md:-left-10 -top-7 -left-7 z-20 m-2 companyLogoAnimation xl:w-16 xl:h-16  w-10 h-10 rounded-full ${
-            isView.logo ? "showItem textComeFromTopToBottom" : "hideItem"
-          }`}
-          ref={refs.logo}
-          data-id="logo"
-          style={{
-            backgroundImage: `url(${"/company-logo.png"})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
       </div>
     </div>
   );

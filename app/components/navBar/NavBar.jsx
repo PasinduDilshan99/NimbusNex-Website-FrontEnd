@@ -77,7 +77,7 @@ const NavBar = () => {
         <div className="md:grid md:grid-rows-[auto] w-full">
           <div className="flex  justify-between md:mx-20 ">
             {/* LOGO */}
-            <div className="flex m-6 bg-[#ffb338] rounded-xl md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105">
+            <div className="flex m-6 relative bg-[#ffb338] rounded-xl md:px-4 md:p-0 p-2 md:rounded-lg transition-transform duration-300 hover:scale-105">
               <div className="justify-center hidden md:flex content-center">
                 {/* <Image
                   src="/newLogoBlack.png"
@@ -100,6 +100,11 @@ const NavBar = () => {
                   className="my-4 w-[150px] md:w-[200px] lg:w-[300px]"
                 />
               </Link>
+              <div className="hidden lg:flex flex-col-reverse">
+                <div className="absolute left-6">
+                  Transforming ideas into digital reality
+                </div>
+              </div>
             </div>
             {/* MIDDLE COMPONENT */}
             <div className="hidden xl:flex lg:justify-between">

@@ -2,14 +2,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import AccessibleForwardIcon from "@mui/icons-material/AccessibleForward";
-import CompanyOverviewService from "./CompanyOverviewService";
 import AnimationIcon from "@mui/icons-material/Animation";
-import CheckIcon from "@mui/icons-material/Check";
-import Image from "next/image";
 import "../../css/common/ComeText.css";
 import "../../css/common/CommonAnimation.css";
+import CompanyOverview from "./CompanyOverview";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
-const CompanyOverviewContent = () => {
+const OurStory = () => {
   const [isInView, setIsInView] = useState({
     header: false,
     intro: false,
@@ -44,6 +43,30 @@ const CompanyOverviewContent = () => {
       icon: AccessibleIcon,
       title: "Our Vision",
       text: "To be a trusted leader in transformative IT solutions, setting new standards for innovation, reliability, and client success across industries worldwide.",
+    },
+    {
+      id: 3,
+      icon: AccessibleIcon,
+      title: "Our values",
+      text: "",
+    },
+  ];
+
+  const ourValues = [
+    {
+      id: 1,
+      title: "Innovation",
+      text: "We stay at the forefront of technology, using the latest tools and techniques to provide impactful solutions.",
+    },
+    {
+      id: 2,
+      title: "Integrity",
+      text: "Honesty and transparency are fundamental to how we do business. We believe in open communication and delivering on our promises.",
+    },
+    {
+      id: 3,
+      title: "Client Success",
+      text: "Our clients’ success is our success. We are committed to building solutions that meet their needs today and in the future.",
     },
   ];
 
@@ -94,10 +117,9 @@ const CompanyOverviewContent = () => {
           }`}
         >
           <div className="titleAnimationLeftToRight"></div>
-          <div> introduce Company</div>
+          <div>About Nimbusnex</div>
         </div>
       </div>
-
       {/* Intro */}
       <div
         className={` text-4xl font-bold mt-3 ${
@@ -106,7 +128,8 @@ const CompanyOverviewContent = () => {
         ref={refs.intro}
         data-id="intro"
       >
-        We are nimbusnex <br />
+        Our Story
+        <br />
       </div>
       <div
         className={`text-lg mt-3 ${
@@ -115,26 +138,20 @@ const CompanyOverviewContent = () => {
         ref={refs.intro}
         data-id="intro"
       >
-        We are ready to turn your ideas into reality with innovative and
-        tailored solutions, empowering business & individuals to overcome
-        challenges and move forward with confidence.
+        Founded by a team of passionate technologists, Nimbusnex was created
+        with a vision to bridge the gap between cutting-edge technology and
+        practical business needs. We believe that every business, regardless of
+        size or industry, deserves access to the transformative power of
+        technology. With a focus on delivering tailored, innovative solutions,
+        Nimbusnex is here to empower organizations to reach new heights.
       </div>
-
       Services
       <div className="py-4 px-1 flex mt-3 ">
         <div className="flex items-center ">
           <div className="flex flex-col mr-4 ">
             {/* Service 1 */}
-            <div
-            // className={`${
-            //   isInView.service1
-            //     ? "showItem textComeFromRightToLeft"
-            //     : "hideItem"
-            // }`}
-            // ref={refs.service1}
-            // data-id="service1"
-            >
-              <CompanyOverviewService
+            <div>
+              <CompanyOverview
                 props={{
                   icon: services[0].icon,
                   title: services[0].title,
@@ -144,16 +161,8 @@ const CompanyOverviewContent = () => {
             </div>
             <hr />
             {/* Service 2 */}
-            <div className="self-start"
-            // className={`${
-            //   isInView.service2
-            //     ? "showItem textComeFromRightToLeft"
-            //     : "hideItem"
-            // }`}
-            // ref={refs.service2}
-            // data-id="service2"
-            >
-              <CompanyOverviewService
+            <div className="self-start">
+              <CompanyOverview
                 props={{
                   icon: services[1].icon,
                   title: services[1].title,
@@ -161,89 +170,43 @@ const CompanyOverviewContent = () => {
                 }}
               />
             </div>
-          </div>
-
-          {/* Project */}
-          {/* <div>
-            <div
-              className={`bg-[#ffb237] md:p-8 p-2  flex justify-center flex-col items-center rounded-xl text-center ${
-                isInView.project
-                  ? "showItem textComeFromRightToLeft"
-                  : "hideItem"
-              }`}
-              ref={refs.project}
-              data-id="project"
-            >
-              <div className="md:h-16 md:w-16 h-12 w-12 text-xs text-center rounded-full border-r-white border-8 flex items-center justify-center">
-                <div className="">90%</div>
+            <hr />
+            {/* service 3 */}
+            <div className="flex flex-col">
+              <div className="md:self-start">
+                <CompanyOverview
+                  props={{
+                    icon: services[2].icon,
+                    title: services[2].title,
+                    text: services[2].text,
+                  }}
+                />
               </div>
-              <div>IT Project Solution</div>
+
+              <div>
+                {ourValues.map((value) => {
+                  return (
+                    <div key={value.id}>
+                      <div className="md:ml-24 text-center md:text-left mb-4">
+                        <div className="text-xl font-semibold mb-1">
+                          {value.title}
+                        </div>
+                        <div className="ml-4">
+                          <FiberManualRecordIcon className="w-3 mr-2"/>
+                          {value.text}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <hr />
             </div>
-          </div> */}
-        </div>
-      </div>
-
-      {/* Check Items
-      <div className="flex flex-col">
-        <div
-          className={`flex items-center p-2 ${
-            isInView.checkItem1
-              ? "showItem textComeFromRightToLeft"
-              : "hideItem"
-          }`}
-          ref={refs.checkItem1}
-          data-id="checkItem1"
-        >
-          <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
-            <CheckIcon className="hover:scale-125" />
           </div>
-          <div>
-            Nor again is there anyone who loves or pursues or desires to obtain
-          </div>
-        </div>
-        <div
-          className={`flex items-center p-2 ${
-            isInView.checkItem2
-              ? "showItem textComeFromRightToLeft"
-              : "hideItem"
-          }`}
-          ref={refs.checkItem2}
-          data-id="checkItem2"
-        >
-          <div className="bg-[#ffb237] rounded-full p-1 mx-2  hover:bg-black hover:text-white transition-colors duration-500">
-            <CheckIcon className="hover:scale-125" />
-          </div>
-          <div>Nam libero tempore, cum soluta nobis est eligendi optio</div>
-        </div>
-      </div> */}
-
-      {/* Footer */}
-      <div
-        className={`bg-[#ffb237] md:p-4  p-1 flex items-center mt-2 ${
-          isInView.footer ? "showItem textComeFromRightToLeft" : "hideItem"
-        } `}
-        ref={refs.footer}
-        data-id="footer"
-      >
-        <div className="">
-          <Image
-            src="/logoblack_mark.png"
-            width={25}
-            height={25}
-            alt="logo"
-            className="ml-3"
-          />
-        </div>
-        <div
-          className={`md:text-xl text-lg font-semibold md:pl-4 pl-6`}
-          ref={refs.footer}
-          data-id="footer"
-        >
-          FOR YOUR IT BUSINESS, WE MADE THINGS EASIER
         </div>
       </div>
     </div>
   );
 };
 
-export default CompanyOverviewContent;
+export default OurStory;

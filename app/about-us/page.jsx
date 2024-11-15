@@ -1,48 +1,49 @@
 import React from "react";
-import NavBar from "../components/navBar/NavBar";
 import TopImage from "../components/topImage/TopImage";
-import CompanyOverview from "../components/companyOverviewComponents/CompanyOverview";
-import Services from "../components/servicesComponents/Services";
-import ITSupport from "../components/itSupport/ITSupport";
-import FeedBack from "../components/feedback/FeedBack";
 import CompanyVideo from "../components/companyVideo/CompanyVideo";
 import TechnologicalObstacles from "../components/technologicalObstacles/technologicalObstacles";
 import OurTeam from "../components/ourTeam/OurTeam";
 import LocationDetails from "../components/locationDetails/LocationDetails";
 import Footer from "../components/footer/Footer";
-import ScrollNavBar from "../components/scrollNavBar/ScrollNavBar";
-import NewNavBar from "../components/NewNavBar";
+import OurStory from "./components/OurStory";
+import AboutCompanyServices from "./components/AboutCompanyServices";
+import WhyChoose from "./components/WhyChoose";
+import Map from "../components/map/Map";
 
 const page = () => {
-  const headerDetails = {title:"About Us", content:"Home / About Us"}
+  const headerDetails = {
+    title: "About Us",
+    content: "Home / About Us",
+    text: "At Nimbusnex, we’re not just another IT company; we’re your partners in progress. Whether you’re looking to develop a new digital platform, enhance your cybersecurity, or leverage data for strategic insights, our team is ready to help you navigate your digital journey with confidence.",
+  };
   return (
     <div className="md:mt-56 mt-20">
       {/* <div>
         <NewNavBar />
       </div> */}
       <div>
-        <TopImage props={headerDetails}/>
+        <TopImage props={headerDetails} />
       </div>
-      <div>
-        <CompanyOverview />
+      <div className="mt-20 mx-[5%]">
+        <OurStory />
       </div>
-      <div>
-        <Services />
+      <div className="mt-20">
+        <AboutCompanyServices />
       </div>
-      <div>
-        <ITSupport />
+      <div className="mt-20">
+        <WhyChoose />
       </div>
       <div>{/* <FeedBack/> */}</div>
-      <div>
+      <div className="mt-20">
         <CompanyVideo />
       </div>
-      <div>
+      <div className="mt-20">
         <TechnologicalObstacles />
       </div>
-      <div>
+      <div className="mt-20">
         <OurTeam />
       </div>
-      <div className="relative">
+      <div className="relative mt-20">
         {/* <div className="">
           <Map />
         </div> */}
@@ -52,7 +53,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mt-20">
         <Footer />
       </div>
     </div>

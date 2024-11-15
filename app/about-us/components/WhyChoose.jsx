@@ -1,54 +1,24 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import TeamMember from "./TeamMember";
 import StormIcon from "@mui/icons-material/Storm";
 
-const OurTeam = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      image: "/team-v1-img1.jpg",
-      name: "Adam Anderson",
-      position: "Senior technician",
-      faceBookLink: "facebook link",
-      twitterLink: "twitter link",
-      linkedinLink: "linkedin link",
-      instagramLink: "instagram link",
-    },
-    {
-      id: 2,
-      image: "/team-v1-img2.jpg",
-      name: "Adam Anderson",
-      position: "Senior technician",
-      faceBookLink: "facebook link",
-      twitterLink: "twitter link",
-      linkedinLink: "linkedin link",
-      instagramLink: "instagram link",
-    },
-    {
-      id: 3,
-      image: "/team-v1-img3.jpg",
-      name: "Adam Anderson",
-      position: "Senior technician",
-      faceBookLink: "facebook link",
-      twitterLink: "twitter link",
-      linkedinLink: "linkedin link",
-      instagramLink: "instagram link",
-    },
-  ];
-
+const WhyChoose = () => {
   const [isView, setIsView] = useState({
-    title: false,
-    text: false,
     icon: false,
     iconText: false,
+    header: false,
+    text: false,
+    feature1: false,
+    feature2: false,
   });
 
   const refs = {
-    title: useRef(null),
-    iconText: useRef(null),
-    text: useRef(null),
     icon: useRef(null),
+    iconText: useRef(null),
+    header: useRef(null),
+    text: useRef(null),
+    feature1: useRef(null),
+    feature2: useRef(null),
   };
 
   useEffect(() => {
@@ -82,7 +52,7 @@ const OurTeam = () => {
   }, []);
 
   return (
-    <div className="mx-[10%]">
+    <div className="min-h-full flex flex-col justify-center p-8 bg-[#28241f] text-white px-[10%] py-20">
       <div className="flex">
         <div
           className={`mr-4 text-yellow-300 circleRotation ${
@@ -101,17 +71,17 @@ const OurTeam = () => {
           data-id="iconText"
         >
           <div className="titleAnimationLeftToRightWhite"></div>
-          <div> Meet the Founders</div>
+          <div> Why Choose Nimbusnex?</div>
         </div>
       </div>
       <div
         className={`capitalize xl:text-5xl lg:text-4xl  text-3xl  font-bold mt-3 ${
-          isView.title ? "showItem textComeFromRightToLeft" : "hideItem"
+          isView.header ? "showItem textComeFromRightToLeft" : "hideItem"
         }`}
-        ref={refs.title}
-        data-id="title"
+        ref={refs.header}
+        data-id="header"
       >
-        Meet the Founders
+        Why Choose Nimbusnex?
       </div>
       <div
         className={`md:text-lg  mt-3 ${
@@ -120,22 +90,14 @@ const OurTeam = () => {
         ref={refs.text}
         data-id="text"
       >
-        Nimbusnex was founded by a team of skilled IT professionals with
-        extensive experience in web development, data science, engineering, and
-        cybersecurity. Driven by a shared passion for technology and innovation,
-        our founders bring a blend of technical expertise and strategic insight
-        to every project, guiding Nimbusnex toward becoming a leader in
-        the IT industry.
-      </div>
-      <div className="flex flex-col lg:flex-row items-center gap-10 justify-center m-10">
-        {teamMembers.map((teamMember) => (
-          <div key={teamMember.id}>
-            <TeamMember props={teamMember} />
-          </div>
-        ))}
+        Nimbusnex combines technical expertise with a commitment to client
+        satisfaction. We work collaboratively with each client, ensuring that
+        our solutions are aligned with their business goals and provide
+        long-lasting value. Our dedication to excellence and continuous
+        improvement makes us a trusted partner in digital transformation.
       </div>
     </div>
   );
 };
 
-export default OurTeam;
+export default WhyChoose;

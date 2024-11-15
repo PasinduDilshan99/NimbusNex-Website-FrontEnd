@@ -12,67 +12,38 @@ const Services = () => {
       image: "/intro-v1-img4.jpg",
       icon: GppGoodIcon,
       title: "Digital Security",
-      text: "Dolor sit amet consect etur",
+      texts: {
+        text1: "Proactive Protection",
+        text2: "Comprehensive Services",
+        text3: "Client-Centric Security",
+      },
     },
     {
       id: 2,
       image: "/intro-v1-img5.jpg",
       icon: StarPurple500Icon,
       title: "Trusted Agency",
-      text: "Dolor sit amet consect etur",
+      texts: {
+        text1: "Integrity and Transparency",
+        text2: "Client Success Focus",
+        text3: "Enduring Partnerships",
+      },
     },
     {
       id: 3,
       image: "/intro-v1-img6.jpg",
       icon: LaptopMacIcon,
       title: "IT Outsourcing",
-      text: "Dolor sit amet consect etur",
+      texts: {
+        text1: "Flexible Solutions",
+        text2: "Cost-Effective Expertise",
+        text3: "Efficient Project Delivery",
+      },
     },
   ];
-
-  // const [isView, setIsView] = useState({
-  //   item: false,
-  // });
-
-  // const refs = {
-  //   item: useRef(null),
-  // };
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           setIsView((prevState) => ({
-  //             ...prevState,
-  //             [entry.target.dataset.id]: true,
-  //           }));
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.1 }
-  //   );
-
-  //   Object.keys(refs).forEach((key) => {
-  //     if (refs[key].current) {
-  //       observer.observe(refs[key].current);
-  //     }
-  //   });
-
-  //   return () => {
-  //     Object.keys(refs).forEach((key) => {
-  //       if (refs[key].current) {
-  //         observer.unobserve(refs[key].current);
-  //       }
-  //     });
-  //   };
-  // }, []);
-
   return (
     <div
       className={`flex flex-col lg:flex-row md:justify-evenly md:items-center `}
-      // ref={refs.item}
-      // data-id="item"
     >
       {servicesData.map((serviceData) => (
         <div key={serviceData.id} className=" ">

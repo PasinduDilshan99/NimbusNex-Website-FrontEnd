@@ -16,7 +16,7 @@ const FooterCompanyDetails = () => {
   };
 
   const getExperienceDuration = () => {
-    const startDate = new Date("2024-07-27");
+    const startDate = new Date("2023-07-27");
     const today = new Date();
 
     let years = today.getFullYear() - startDate.getFullYear();
