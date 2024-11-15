@@ -48,20 +48,20 @@ const LocationDetails = () => {
     {
       id: 1,
       icon: EmailIcon,
-      title: "101 Merritt 5, north tower",
-      text: "14851 New York, USA",
+      title: "351/10 Rajasinghe Mawatha",
+      text: "Hewagama, Kaduwela",
     },
     {
       id: 2,
       icon: AddLocationAltIcon,
       title: "Get In Touch",
-      text: "+088 11 22 00 44",
+      text: "+94 70 707 6052",
     },
     {
       id: 3,
       icon: PhoneIcon,
       title: "Quick Email us",
-      text: "help12@sitename.com",
+      text: "info@nimbusnex.com",
     },
   ];
   return (

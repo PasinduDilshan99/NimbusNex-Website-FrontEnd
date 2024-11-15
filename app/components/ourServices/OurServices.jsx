@@ -85,12 +85,6 @@ const OurServices = () => {
       title: "Data Science",
       text: "Unlock insights and drive decisions with advanced data solutions.",
     },
-    {
-      id: 5,
-      icon: WifiTetheringIcon,
-      title: "Our Other Services",
-      text: "Beyond IT, Nimbusnex delivers high-quality 3D Printing and Laser Engraving services to bring your ideas to life with precision and creativity",
-    },
   ];
 
   return (
@@ -140,7 +134,7 @@ const OurServices = () => {
         </div>
       </div>
       <div
-        className={`grid grid-cols-5 content-center items-center md:mx-8 mx-[10%] `}
+        className={`grid xl:grid-cols-4 xl:grid-rows-1 grid-cols-1 grid-rows-4 content-center items-center md:mx-8 mx-[10%] `}
       >
         {servicesData.map((serviceData) => (
           <div key={serviceData.id} className="m-2">
@@ -156,7 +150,7 @@ const OurServices = () => {
           ref={refs.subHead}
           data-id="subHead"
         >
-         {" We're Ready to Grow your IT Solution !"}
+          {" We're Ready to Grow your IT Solution !"}
         </div>
         <div
           className={`mx-[5%] ${
@@ -165,9 +159,10 @@ const OurServices = () => {
           ref={refs.subText}
           data-id="subText"
         >
-          Nemo enim ipsam voluptatem quia voluptas sit asper natur aut odit aut
-          fugit <br />
-          sed quia consequuntur magni dolor qui ratione business
+    
+          Beyond IT, Nimbusnex delivers high-quality 3D Printing and Laser
+          Engraving services to bring your ideas to life with
+          precision and creativity.
         </div>
         <div
           className={`mt-3 ${

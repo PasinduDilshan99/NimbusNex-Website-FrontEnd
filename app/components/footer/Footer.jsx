@@ -66,9 +66,9 @@ const Footer = () => {
             <div className="self-center">
               <FooterCompanyDetails />
             </div>
-            <div>
+            {/* <div>
               <FooterPopularPost />
-            </div>
+            </div> */}
             <div>
               <FooterLinksComponent />
             </div>

@@ -74,13 +74,15 @@ const FooterCompanyDetails = () => {
     <div className="flex flex-col ">
       <div className="text-3xl flex items-center ">
         <div
-          className={`border-2 border-white rounded-full companyLogoAnimation xl:w-12 xl:h-12 m-2 w-10 h-10  ${
+          className={`companyLogoAnimation xl:w-12 xl:h-12 m-2 w-10 h-10  ${
             isView.icon ? "showItem textComeFromLeftToRight" : "hideItem"
           } `}
           style={{
-            backgroundImage: `url(${"/company-logo.png"})`,
+            backgroundImage: `url(${"/logo_orange_mark.png"})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            width: "40px",
+            height: "40px",
           }}
           ref={refs.icon}
           data-id="icon"

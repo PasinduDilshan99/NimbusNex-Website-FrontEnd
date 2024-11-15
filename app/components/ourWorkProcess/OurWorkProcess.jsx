@@ -57,19 +57,19 @@ const OurWorkProcess = () => {
       id: "01",
       icon: SelfImprovementIcon,
       title: "Your Concept",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid",
+      text: "Share your vision, and we’ll collaborate to define clear objectives and tailor solutions to meet your needs.",
     },
     {
       id: "02",
       icon: SentimentVerySatisfiedIcon,
       title: "Task Process",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid",
+      text: "Watch your idea come to life as we design, develop, and refine the solution with transparency and precision",
     },
     {
       id: "03",
       icon: StairsIcon,
       title: "Launch",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid",
+      text: "Experience a seamless rollout, with ongoing support to ensure your success post-launch. Let us turn your ideas into reality with ease and efficiency.",
     },
   ];
   return (
@@ -106,11 +106,18 @@ const OurWorkProcess = () => {
           >
             We Solve the Task Very Easily
           </div>
+          <div className="md:text-lg">
+            At Nimbusnex, we make achieving your goals simple and effective
+            through our three-phase approach:
+          </div>
           <div className="flex flex-col lg:flex-row lg:justify-center gap-5 items-center">
             {workProcessList.map((workProcessData, index) => (
               <div key={workProcessData.id} className="">
                 <div className="flex justify-between items-center p-2 ">
-                  <WorkProcessComponent props={workProcessData} className="abc" />
+                  <WorkProcessComponent
+                    props={workProcessData}
+                    className="abc"
+                  />
                   {index !== workProcessList.length - 1 && (
                     <Image
                       className={`pl-4 hidden lg:block ${

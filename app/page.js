@@ -34,12 +34,12 @@ export default function Home() {
       <div>
         <OurServices />
       </div>
-      <div>
+      {/* <div>
         <ITSupport />
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <FeedBackCarosuel />
-      </div>
+      </div> */}
       <div className="relative">
         <div>
           <RecentProjectArea />
@@ -53,9 +53,9 @@ export default function Home() {
       <div>
         <OurWorkProcess />
       </div>
-      <div>
+      {/* <div>
         <NewPosts />
-      </div>
+      </div> */}
       <div className="relative">
         {/* <div className="">
           <Map />
