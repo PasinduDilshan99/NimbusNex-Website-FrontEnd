@@ -60,13 +60,13 @@ export default function Home() {
         {/* <div className="">
           <Map />
         </div> */}
-        <div className="absolute w-full z-10 md:-bottom-28 lg:-bottom-10 -bottom-32">
-          <div className="flex justify-center w-full ">
+        <div className="absolute w-full z-10 md:-bottom-28 lg:-bottom-10 -bottom-40">
+          <div className="flex justify-center w-full mt-abc">
             <LocationDetails />
           </div>
         </div>
       </div>
-      <div>
+      <div className="md:mt-0 mt-32">
         <Footer />
       </div>
     </main>
